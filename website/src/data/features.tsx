@@ -21,7 +21,7 @@ export type FeatureItem = {
 const FEATURES: FeatureItem[] = [
   {
     title: translate({
-      message: 'Powered by MDX',
+      message: 'Mass Adoption Fast',
       id: 'homepage.features.powered-by-mdx.title',
     }),
     image: {
@@ -31,16 +31,13 @@ const FEATURES: FeatureItem[] = [
     },
     text: (
       <Translate id="homepage.features.powered-by-mdx.text">
-        Save time and focus on text documents. Simply write docs and blog posts
-        with MDX, and Docusaurus builds them into static HTML files ready to be
-        served. You can even embed React components in your Markdown thanks to
-        MDX.
+        Don’t keep your users waiting. Solana has block times of 400 milliseconds — and as hardware gets faster, so will the network.
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Built Using React',
+      message: 'Mass Adoption Scalable',
       id: 'homepage.features.built-using-react.title',
     }),
     image: {
@@ -50,15 +47,13 @@ const FEATURES: FeatureItem[] = [
     },
     text: (
       <Translate id="homepage.features.built-using-react.text">
-        Extend and customize your project&apos;s layout by writing React
-        components. Leverage the pluggable architecture, and design your own
-        site while reusing the same data created by Docusaurus plugins.
+        Get big, quick. Solana is made to handle thousands of transactions per second, and fees for both developers and users remain less than $0.0025.
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Ready for Translations',
+      message: 'Decentralized',
       id: 'homepage.features.ready-for-translations.title',
     }),
     image: {
@@ -68,14 +63,13 @@ const FEATURES: FeatureItem[] = [
     },
     text: (
       <Translate id="homepage.features.ready-for-translations.text">
-        Localization comes out-of-the-box. Use git, Crowdin, or any other
-        translation manager to translate your docs and deploy them individually.
+        The Solana network is validated by thousands of nodes that operate independently of each other, ensuring your data remains secure and censorship resistant.
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Document Versioning',
+      message: 'Energy Efficient',
       id: 'homepage.features.document-versioning.title',
     }),
     image: {
@@ -85,14 +79,13 @@ const FEATURES: FeatureItem[] = [
     },
     text: (
       <Translate id="homepage.features.document-versioning.text">
-        Support users on all versions of your project. Document versioning helps
-        you keep documentation in sync with project releases.
+        Solana’s proof of stake network and other innovations minimize its impact on the environment. Each Solana transaction uses about the same energy as a few Google searches.
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Content Search',
+      message: 'Build for growth',
       id: 'homepage.features.content-search.title',
     }),
     image: {
@@ -102,8 +95,7 @@ const FEATURES: FeatureItem[] = [
     },
     text: (
       <Translate id="homepage.features.content-search.text">
-        Make it easy for your community to find what they need in your
-        documentation. We proudly support Algolia documentation search.
+        Solana Pay is now available to millions of businesses as an approved app integration on Shopify. Solana Pay is built for immediate USDC transactions, fees that are fractions of a penny, and a net-zero environmental impact.
       </Translate>
     ),
   },

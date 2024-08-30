@@ -43,7 +43,7 @@ function HeroBanner() {
               __html: translate({
                 id: 'homepage.hero.title',
                 message:
-                  'Build <b>optimized</b> websites <b>quickly</b>, focus on your <b>content</b>',
+                  '<b>Fast</b> for everyone.<b>Powerful</b> for developers.',
                 description:
                   'Home page hero title, can contain simple html tags',
               }),
@@ -54,8 +54,8 @@ function HeroBanner() {
           <Link className="button button--primary" to="/docs">
             <Translate>Get Started</Translate>
           </Link>
-          <Link className="button button--info" to="https://docusaurus.new">
-            <Translate>Try a Demo</Translate>
+          <Link className="button button--info" to="/showcase">
+            <Translate>Start Building</Translate>
           </Link>
           <span className={styles.indexCtasGitHubButtonWrapper}>
             <iframe
@@ -82,7 +82,7 @@ function TweetsSection() {
     <div className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
         <Heading as="h2" className={clsx('margin-bottom--lg', 'text--center')}>
-          <Translate>Loved by many engineers</Translate>
+          <Translate>Loved by many website</Translate>
         </Heading>
         <div className={clsx('row', styles.tweetsSection)}>
           {tweetColumns.map((tweetItems, i) => (
@@ -138,7 +138,7 @@ function VideoContainer() {
           </Heading>
           <div className="video-container">
             <LiteYouTubeEmbed
-              id="_An9EsKPhp0"
+              id="BdQ43G8eR2s"
               params="autoplay=1&autohide=1&showinfo=0&rel=0"
               title="Explain Like I'm 5: Docusaurus"
               poster="maxresdefault"
@@ -213,12 +213,12 @@ function TopBanner() {
       <div className={styles.topBannerTitle}>
         {'🎉\xa0'}
         <Link
-          to={`/blog/releases/${announcedVersion}`}
+          to={`https://www.colosseum.org/radar`}
           className={styles.topBannerTitleText}>
           <Translate
             id="homepage.banner.launch.newVersion"
             values={{newVersion: announcedVersion}}>
-            {'Docusaurus\xa0{newVersion} is\xa0out!️'}
+            {'Solana hackathon now!'}
           </Translate>
         </Link>
         {'\xa0🥳'}

@@ -43,56 +43,216 @@ export type TagType =
   | 'favorite'
   // For open-source sites, a link to the source code is required.
   // The source should be the *website's* source, not the project's source!
-  | 'opensource'
+  | 'Memes'
   | 'product'
   // Feel free to add the 'design' tag as long as there's _some_ level of
   // CSS/swizzling.
   | 'design'
   // Site must have more than one locale.
-  | 'i18n'
-  | 'versioning'
-  // Large sites are defined as those with > 200 pages, excluding versions.
-  | 'large'
+  | 'Gaming'
+  | 'RWA'
+  // Chain sites are defined as those with > 200 pages, excluding versions.
+  | 'Chain'
   | 'meta'
-  | 'personal'
+  | 'FanToken'
   // Right-to-left direction.
-  | 'rtl';
+  | 'NFT';
 
 // Add sites to this list
 // prettier-ignore
 const Users: User[] = [
+    {
+        "title": "BTC",
+        "description": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+        "preview": require('./showcase/algolia.png'), // 假设这是占位符，需要替换为实际图片路径
+        "website": "https://btc.543x.com/",
+        "source": "https://app.meteora.ag/pools/83XaC2jg2FqHMVjcUnHZmcgRL5MvgD45B9FxbK8evosk", // 假设这是通用的GitHub链接，可能需要更新
+        "tags": ["favorite", "Memes", "product"]
+    },
+    {
+        "title": "SOL",
+        "description": "Native cryptocurrency of the Solana blockchain",
+        "preview": require('./showcase/58729655.png'), // 假设这是占位符，需要替换为实际图片路径
+        "website": "http://sol.543x.com/",
+        "source": "https://accounts.binance.com/en/register?ref=11131007", // 假设这是通用的GitHub链接，可能需要更新
+        "tags": ["favorite", "Memes", "product"]
+    },
+    {
+        "title": "USDC",
+        "description": "USD-pegged stablecoin for digital transactions",
+        "preview": require('./showcase/11149.png'), // 假设这是占位符，需要替换为实际图片路径
+        "website": "http://usdc.543x.com/",
+        "source": "https://app.meteora.ag/pools/AizCbr94n73ykw7iefDbXc61AjQiQEULnTJs6m5Hdc6y", // 这里应该是USDC项目的实际源代码或文档链接
+        "tags": ["favorite", "Memes", "product"] // 这些标签可能需要根据USDC的特点进行调整
+    },
+    {
+        "title": "BUSD",
+        "description": "Rare digital collectibles on the blockchain",
+        "preview": require('./showcase/11117.png'), // 假设这是占位符，需要替换为实际图片路径
+        "website": "http://busd.543x.com/",
+        "source": "https://app.meteora.ag/pools/2EzPinaN1FcDu7jB5YxFYERbhxMYiT3bYNiP3sL5jfdB", // 这里应该是BUSD项目的实际源代码或文档链接
+        "tags": ["favorite", "Memes", "product"] // 这些标签根据BUSD的特点进行了调整
+    },
+    {
+        "title": "FDUSD",
+        "description": "Girlfriend's worth, usually used humorously",
+        "preview": require('./showcase/11125.png'), // 假设这是占位符，需要替换为实际图片路径
+        "website": "https://fdusd.543x.com/",
+        "source": "https://app.meteora.ag/pools/JBdMRhuxAtMW754NceSMFPLnpPc2XAwgYZwXNUawSah5", // 这里应该是FDUSD项目的实际源代码或文档链接
+        "tags": ["favorite", "Memes", "product"] // 这些标签根据FDUSD的特点进行了调整
+    },
+      {
+          "title": "PANDA",
+          "description": "Chinese gold coins with varying panda designs",
+          "preview": require('./showcase/11131.png'), // 请替换为实际的图片路径，如 './showcase/panda.png'
+          "website": "http://panda.543x.com/",
+          "source": "https://app.meteora.ag/pools/6xvVWCy9KtkA7DnVtVUJqmMorrYxUS3VUcUYAzM59gXe", // 请根据实际情况填写
+          "tags": ["favorite", "Memes", "product"] // 根据项目特点自定义标签
+      },
+      {
+          "title": "SATOSHI",
+          "description": "1 Bitcoin is equivalent to 100 million Satoshi",
+          "preview": require('./showcase/11138.png'), // 请替换为实际的图片路径
+          "website": "http://satoshi.543x.com/",
+          "source": "https://app.meteora.ag/pools/5TMTjmESoG6Hqbwrv9AeweoFyCet8Min2G48oQbhbTp6", // 请根据实际情况填写
+          "tags": ["favorite", "Memes", "product"]// 根据项目特点自定义标签
+      },
+      {
+          "title": "TON",
+          "description": "Efficient, low-cost, decentralized blockchain platform",
+          "preview": require('./showcase/TON.png'), // 请替换为实际的图片路径
+          "website": "http://ton.543x.com/",
+          "source": "https://accounts.binance.com/en/register?ref=11131007", // 请根据实际情况填写
+          "tags": ["favorite", "Memes", "product"]// 根据项目特点自定义标签
+      },
+      {
+          "title": "usdt",
+          "description": "USD-pegged stablecoin for blockchain transactions  ",
+          "preview": require('./showcase/11150.png'), // 注意：这里假设您使用的是Node.js环境，否则应替换为静态图片路径
+          "website": "https://usdt.543x.com/",
+          "source": "https://app.meteora.ag/pools/BSo8Z58sYiAnmTkEX5XFQLPxGERD3pgDKdVQtHneSbkJ",
+          "tags": ["favorite", "Memes", "product"]
+      },
+        {
+            "title": "SHIB",
+            "description": "It works right now, there's no need for a sidechain, the only token needed is bitcoin itself",
+            "preview": require('./showcase/5994.png'),
+            "website": "http://shib.543x.com/",
+            "source": "https://accounts.binance.com/en/register?ref=11131007",
+            "tags": ["favorite", "Memes", "product"]
+        },
+        {
+            "title": "NO",
+            "description": "An internet Memes used to express emotion and create humor",
+            "preview": require('./showcase/11130.png'),
+            "website": "http://no.543x.com/",
+            "source": "https://app.meteora.ag/pools/Bz1kKXV74cznsVJSu4cPcdrD2ZbCv6raez9Bq5Edmtgw",
+            "tags": ["favorite", "Memes", "product"]
+        },
+        {
+            "title": "CLOWN",
+            "description": "A currency that delivers positivity, optimism, friendship and fun",
+            "preview": require('./showcase/11120.png'),
+            "website": "http://clown.543x.com/",
+            "source": "https://app.meteora.ag/pools/5m7P7Ye2wHatH6TmFbzyNoaYvdPcnDTfzuZZPU9drbxW",
+            "tags": ["favorite", "Memes", "product"]
+        },
+        {
+            "title": "BNB",
+            "description": "Native cryptocurrency of the Binance platform",
+            "preview": require('./showcase/1839.png'),
+            "website": "https://bnb.543x.com/",
+            "source": "https://app.meteora.ag/pools/7CdHDxxdEFEM8MEHaEPNfzL18D8w35AkArWrd9SH7bC2",
+            "tags": ["favorite", "Memes", "product"]
+        },
+    {
+        "title": "SATS",
+        "description": "The most memeable memecoin on the Bitcoin Chain known for its significant cultural impact and mascot status",
+        "preview": require('./showcase/28683.png'),
+        "website": "http://sats.543x.com/",
+        "source": "https://app.meteora.ag/pools/83XaC2jg2FqHMVjcUnHZmcgRL5MvgD45B9FxbK8evosk",
+        "tags": ["favorite", "Memes", "product"]
+    },
+    {
+        "title": "DOG•GO•TO•THE•MOON",
+        "description": "Cardano blockchain’s cryptocurrency for payments and investments",
+        "preview": require('./showcase/DOG1.png'),
+        "website": "http://dog.543x.com/",
+        "source": "https://app.meteora.ag/pools/83XaC2jg2FqHMVjcUnHZmcgRL5MvgD45B9FxbK8evosk",
+        "tags": ["favorite", "Memes", "product"]
+    },
+    {
+        "title": "JUMP",
+        "description": "community-driven Memes coin with a mission to reach the moon. You can have fun with Memes coins while gaining pepe trust",
+        "preview": require('./showcase/11134.png'),
+        "website": "http://jump.543x.com/",
+        "source": "https://app.meteora.ag/pools/9JqQPaU6azN6yRjrRg3MSka4tLeMEKpZ2pe5D3CLnoc",
+        "tags": ["favorite", "Memes", "product"]
+    },
+      {
+          "title": "A",
+          "description": "it combines loneliness, despair, exploration spirit and community power, aiming to become a unique existence in the cryptocurrency field",
+          "preview": require('./showcase/11113.png'),
+          "website": "https://a.543x.com/",
+          "source": "https://app.meteora.ag/pools/8NzwPPEQJFkjRqeBd1jpy3efnvYmgyCk18bqujqiqa4k",
+          "tags": ["favorite", "Memes", "product"]
+      },
+      {
+          "title": "MIQI",
+          "description": "Fast, agile, strong network, strong adaptability and cute affinity, aiming to provide users with efficient, stable and friendly cryptocurrency trading experience",
+          "preview": require('./showcase/11128.png'),
+          "website": "https://miqi.543x.com/",
+          "source": "https://app.meteora.ag/pools/7gZYm4VQd4hTNgA9Eapdq37XLcuGjHYAq6CQ6NM2SXUu",
+          "tags": ["favorite", "Memes", "product"]
+      },
+      {
+          "title": "SHEEP",
+          "description": "Inspired by the snake's flexibility, stealth, alertness, metamorphosis, evolution and global interconnection, we aim to become a trusted global cryptocurrency brand .",
+          "preview": require('./showcase/11141.png'),
+          "website": "https://sheep.543x.com/",
+          "source": "https://app.meteora.ag/pools/GYJkxTb1WLQELBFCXgLxPACuKA1Abd3bJFPKrEPsG5m9",
+          "tags": ["favorite", "Memes", "product"]
+      },
+      {
+          "title": "PEACE",
+          "description": "It has the characteristics of agile adaptation, community power, hidden security, and reproductive expansion. It provides users with a safe, efficient, and convenient trading experience.",
+          "preview": require('./showcase/11115.png'),
+          "website": "https://peace.543x.com/",
+          "source": "https://app.meteora.ag/pools/6YwbhVxL5DBArRaC2rSsS738wjdzTzEzPSZDwRnRSnHX",
+          "tags": ["favorite", "Memes", "product"]
+      },
   {
-    title: 'AgileTs',
-    description: 'Global State and Logic Framework for reactive Applications',
-    preview: require('./showcase/agilets.png'),
-    website: 'https://agile-ts.org/',
-    source: 'https://github.com/agile-ts/documentation',
-    tags: ['opensource', 'design'],
+    title: 'XRP',
+    description: 'Native cryptocurrency of the Ripple network  ',
+    preview: require('./showcase/xrp.png'),
+    website: 'https://xrpl.org',
+    source: 'https://accounts.binance.com/en/register?ref=11131007',
+    tags: ['Memes', 'design'],
   },
   {
-    title: 'AI-Speaker',
-    description: 'Local, reliable, fast and private Audio and IoT gate.',
-    preview: require('./showcase/aispeaker.png'),
-    website: 'https://ai-speaker.com/',
-    source: 'https://github.com/sviete/AIS-WWW',
-    tags: ['opensource'],
+    title: 'RATS',
+    description: 'The most memeable memecoin on the Bitcoin Chain  known for its significant cultural impact and mascot status.',
+    preview: require('./showcase/28452.png'),
+    website: 'http://rats.543x.com/',
+    source: 'https://accounts.binance.com/en/register?ref=11131007',
+    tags: ['Memes'],
   },
   {
     title: "Akara's blog",
-    description: 'Personal frontend blog for learning',
+    description: 'FanToken frontend blog for learning',
     preview: require('./showcase/akara-blog.png'),
     website: 'https://messiahhh.github.io/blog/',
     source: 'https://github.com/messiahhh/blog',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
-    title: 'Algolia DocSearch',
+    title: 'DOGE',
     description:
-      'The best search experience for docs, integrates in minutes, for free',
-    preview: require('./showcase/algolia.png'),
-    website: 'https://docsearch.algolia.com/',
-    source: 'https://github.com/algolia/docsearch/tree/main/packages/website',
-    tags: ['favorite', 'opensource', 'product'],
+      'Meme based cryptocurrency known as dogecoin',
+    preview: require('./showcase/74.png'),
+    website: 'https://dogecoin.com/',
+    source: 'https://app.meteora.ag/pools/vVTYpKUvcZHr5EJJKRefamq7u8W8eDjz7gqERAvga3R',
+    tags: ['favorite', 'Memes', 'product'],
   },
   {
     title: 'Apache APISIX',
@@ -101,7 +261,7 @@ const Users: User[] = [
     preview: require('./showcase/apache-apisix.png'),
     website: 'https://apisix.apache.org/',
     source: 'https://github.com/apache/apisix-website',
-    tags: ['opensource', 'i18n', 'large'],
+    tags: ['Memes', 'Gaming', 'Chain'],
   },
   {
     title: 'Apex FP',
@@ -109,7 +269,7 @@ const Users: User[] = [
     preview: require('./showcase/apexfp.png'),
     website: 'https://www.apexfp.org',
     source: 'https://github.com/ipavlic/apex-fp/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Astronomer',
@@ -118,7 +278,7 @@ const Users: User[] = [
     preview: require('./showcase/astronomer.png'),
     website: 'https://docs.astronomer.io',
     source: 'https://github.com/astronomer/docs',
-    tags: ['product', 'versioning', 'opensource'],
+    tags: ['product', 'RWA', 'Memes'],
   },
   {
     title: 'AvN Gateway',
@@ -127,7 +287,7 @@ const Users: User[] = [
     preview: require('./showcase/aventus.png'),
     website: 'https://aventus-network-services.github.io/avn-gateway-docs/',
     source: null,
-    tags: ['versioning', 'product'],
+    tags: ['RWA', 'product'],
   },
   {
     title: 'Awe framework',
@@ -136,7 +296,7 @@ const Users: User[] = [
     preview: require('./showcase/awe-framework.png'),
     website: 'https://docs.aweframework.com/',
     source: 'https://gitlab.com/aweframework/awe/-/tree/develop/website',
-    tags: ['opensource', 'i18n', 'versioning'],
+    tags: ['Memes', 'Gaming', 'RWA'],
   },
   {
     title: 'Bandwidth',
@@ -145,7 +305,7 @@ const Users: User[] = [
     preview: require('./showcase/bandwidth.png'),
     website: 'https://dev.bandwidth.com/',
     source: 'https://github.com/Bandwidth/api-docs',
-    tags: ['opensource', 'large', 'product'],
+    tags: ['Memes', 'Chain', 'product'],
   },
   {
     title: 'johnnyreilly.com',
@@ -153,7 +313,7 @@ const Users: User[] = [
     preview: require('./showcase/johnnyreilly.png'),
     website: 'https://johnnyreilly.com/',
     source: 'https://github.com/johnnyreilly/blog.johnnyreilly.com',
-    tags: ['opensource', 'personal', 'large'],
+    tags: ['Memes', 'FanToken', 'Chain'],
   },
   {
     title: 'Blog Matheus Brunelli',
@@ -162,7 +322,7 @@ const Users: User[] = [
     preview: require('./showcase/blogmatheusbrunelli.png'),
     website: 'https://mrbrunelli.github.io/blog/',
     source: 'https://github.com/mrbrunelli/blog',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Blogasaurus',
@@ -170,7 +330,7 @@ const Users: User[] = [
     preview: require('./showcase/blogasaurus.png'),
     website: 'https://blog.palashsh.me/',
     source: 'https://github.com/BattleOfPlassey/blogasaurus',
-    tags: ['personal', 'opensource'],
+    tags: ['FanToken', 'Memes'],
   },
   {
     title: 'Botonic',
@@ -178,7 +338,7 @@ const Users: User[] = [
     preview: require('./showcase/botonic.png'),
     website: 'https://botonic.io/',
     source: 'https://github.com/hubtype/botonic/tree/master/docs/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'BoxyHQ',
@@ -186,7 +346,7 @@ const Users: User[] = [
     preview: require('./showcase/boxyhq.png'),
     website: 'https://boxyhq.com/',
     source: 'https://github.com/boxyhq/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Brainboard IDE',
@@ -198,11 +358,11 @@ const Users: User[] = [
   },
   {
     title: "Bruce's Wiki",
-    description: 'A personal wiki by Bruce Song',
+    description: 'A FanToken wiki by Bruce Song',
     preview: require('./showcase/bruce-wiki.png'),
     website: 'https://wiki.brucesong.xyz/',
     source: 'https://github.com/recallwei/wiki',
-    tags: ['opensource', 'design', 'personal'],
+    tags: ['Memes', 'design', 'FanToken'],
   },
   {
     title: 'Build Tracker',
@@ -211,7 +371,7 @@ const Users: User[] = [
     preview: require('./showcase/build-tracker.png'),
     website: 'https://buildtracker.dev',
     source: 'https://github.com/paularmstrong/build-tracker/tree/main/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Chaos Mesh',
@@ -219,7 +379,7 @@ const Users: User[] = [
     preview: require('./showcase/chaos-mesh.png'),
     website: 'https://chaos-mesh.org',
     source: 'https://github.com/chaos-mesh/website',
-    tags: ['opensource', 'product', 'i18n'],
+    tags: ['Memes', 'product', 'Gaming'],
   },
   {
     title: 'ChatKitty',
@@ -236,7 +396,7 @@ const Users: User[] = [
     preview: require('./showcase/claritychallenge.png'),
     website: 'https://claritychallenge.github.io/clarity_CEC1_doc',
     source: 'https://github.com/claritychallenge/clarity_CEC1_doc',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Clutch',
@@ -244,7 +404,7 @@ const Users: User[] = [
     preview: require('./showcase/clutch.png'),
     website: 'https://clutch.sh/',
     source: 'https://github.com/lyft/clutch/tree/main/docs/_website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Component Kit',
@@ -260,7 +420,7 @@ const Users: User[] = [
     preview: require('./showcase/configcat.png'),
     website: 'https://configcat.com/docs/',
     source: 'https://github.com/configcat/docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Console Table',
@@ -268,7 +428,7 @@ const Users: User[] = [
     preview: require('./showcase/console-table.png'),
     website: 'https://console-table.netlify.app/',
     source: 'https://github.com/ayonious/console-table-docu',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Country State City API',
@@ -277,7 +437,7 @@ const Users: User[] = [
     preview: require('./showcase/countrystatecity.png'),
     website: 'https://countrystatecity.in/',
     source: 'https://github.com/dr5hn/csc-website',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Create React App',
@@ -286,7 +446,7 @@ const Users: User[] = [
     website: 'https://facebook.github.io/create-react-app/',
     source:
       'https://github.com/facebook/create-react-app/tree/main/docusaurus/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Daily Digest - COVID-19 IN FRANCE',
@@ -295,7 +455,7 @@ const Users: User[] = [
     preview: require('./showcase/daily-digest-covid-19-in-france.png'),
     website: 'https://covid-fr.misterfishup.com/en/',
     source: 'https://github.com/MisterFISHUP/covid-19-in-france',
-    tags: ['opensource', 'i18n', 'large'],
+    tags: ['Memes', 'Gaming', 'Chain'],
   },
   {
     title: 'Dart Code Metrics',
@@ -304,16 +464,16 @@ const Users: User[] = [
     preview: require('./showcase/dart-code-metrics.png'),
     website: 'https://dartcodemetrics.dev/',
     source: 'https://github.com/dart-code-checker/dart-code-metrics',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'Datagit',
+    title: 'GF',
     description:
-      'A persian tutorial website strive to make quality education for everyone.',
-    preview: require('./showcase/datagit.png'),
-    website: 'https://datagit.ir/',
-    source: 'https://github.com/ghaseminya/datagit_v2.docusaurus',
-    tags: ['opensource', 'favorite', 'rtl'],
+      'Girlfriend worth, usually used humorously.',
+    preview: require('./showcase/11126.png'),
+    website: 'http://gf.543x.com',
+    source: 'https://app.meteora.ag/pools/5zz1MnzBxhozPoGDGysdu4CeeMEVeJ1cay8gpgw6Motb',
+    tags: ['Memes', 'favorite', 'NFT'],
   },
   {
     title: 'DevSpace',
@@ -321,7 +481,7 @@ const Users: User[] = [
     preview: require('./showcase/devspace.png'),
     website: 'https://devspace.sh/cli/docs/',
     source: 'https://github.com/loft-sh/devspace/tree/master/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'difranca | Tech-Notes',
@@ -330,7 +490,7 @@ const Users: User[] = [
     preview: require('./showcase/difranca-technotes.png'),
     website: 'https://difranca.github.io/',
     source: 'https://github.com/difranca/difranca.github.io',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Digital Support Services Notes',
@@ -338,7 +498,7 @@ const Users: User[] = [
     preview: require('./showcase/digitalsupportservices.png'),
     website: 'https://notes.nayanpatel.net',
     source: 'https://github.com/PatelN123/Digital-Support-Notes',
-    tags: ['opensource', 'design', 'personal'],
+    tags: ['Memes', 'design', 'FanToken'],
   },
   {
     title: 'Discord Resources',
@@ -346,7 +506,7 @@ const Users: User[] = [
     preview: require('./showcase/discordresources.png'),
     website: 'https://discordresources.com/',
     source: 'https://github.com/Discord-Resources-Wiki/Discord-Resources-Wiki',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Divine Web Service Framework',
@@ -354,7 +514,7 @@ const Users: User[] = [
     preview: require('./showcase/divine-wsf.png'),
     website: 'https://divine-software.github.io/WSF/',
     source: 'https://github.com/Divine-Software/WSF/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Djamaile Rahamat',
@@ -362,7 +522,7 @@ const Users: User[] = [
     preview: require('./showcase/djamaile.png'),
     website: 'https://djamaile.dev/',
     source: 'https://github.com/djamaile/portfolio',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Draft.js',
@@ -370,7 +530,7 @@ const Users: User[] = [
     preview: require('./showcase/draftjs.png'),
     website: 'https://draftjs.org/',
     source: 'https://github.com/facebook/draft-js/tree/main/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Drayman',
@@ -378,21 +538,21 @@ const Users: User[] = [
     preview: require('./showcase/drayman.png'),
     website: 'https://drayman.io/',
     source: 'https://github.com/Claviz/drayman/tree/main/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'Dyte',
-    description: 'The most developer friendly live video SDK',
-    preview: require('./showcase/dyte.png'),
-    website: 'https://docs.dyte.io',
-    source: 'https://github.com/dyte-in/docs',
+    title: 'YAYA',
+    description: 'A cultural symbolic currency full of fun, love of life and friendship',
+    preview: require('./showcase/11151.png'),
+    website: 'https://yaya.543x.com',
+    source: 'https://app.meteora.ag/pools/Di9aeHFYeczWysnQsbNpxFgqTzJYyU9pKCovSdrhFXHQ',
     tags: [
       'favorite',
       'product',
       'design',
-      'versioning',
-      'large',
-      'opensource',
+      'RWA',
+      'Chain',
+      'Memes',
     ],
   },
   {
@@ -401,7 +561,7 @@ const Users: User[] = [
     preview: require('./showcase/easy-dates.png'),
     website: 'https://easy-dates.dev',
     source: 'https://github.com/sandypockets/easy-dates/tree/main/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Easypanel',
@@ -412,13 +572,13 @@ const Users: User[] = [
     tags: ['product'],
   },
   {
-    title: 'Eightshift',
+    title: 'CAT',
     description:
-      'All the tools you need to start building a modern WordPress project, using all the latest development tools.',
-    preview: require('./showcase/eightshift-docs.png'),
-    website: 'https://infinum.github.io/eightshift-docs/',
-    source: 'https://github.com/infinum/eightshift-docs',
-    tags: ['opensource', 'favorite', 'design'],
+      'An elegant and unique cat-themed platform for trading cat supplies, inspired by a cat with pearl earrings.',
+    preview: require('./showcase/1111.png'),
+    website: 'http://cat.543x.com',
+    source: 'https://app.meteora.ag/pools/9oRdiNMEPegLEmczr55zhTygRymQn44D7Ry5Cduj4VXv',
+    tags: ['Memes', 'favorite', 'design'],
   },
   {
     title: 'Enarx',
@@ -427,7 +587,7 @@ const Users: User[] = [
     preview: require('./showcase/enarx.png'),
     website: 'https://enarx.dev/',
     source: 'https://github.com/enarx/enarx.github.io',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Eta',
@@ -435,7 +595,7 @@ const Users: User[] = [
     preview: require('./showcase/eta.png'),
     website: 'https://eta.js.org/',
     source: 'https://github.com/eta-dev/eta-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'EverShop',
@@ -443,7 +603,7 @@ const Users: User[] = [
     preview: require('./showcase/evershop.png'),
     website: 'https://evershop.io/',
     source: 'https://github.com/evershopcommerce/docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'FAST',
@@ -451,7 +611,7 @@ const Users: User[] = [
     preview: require('./showcase/fast.png'),
     website: 'https://www.fast.design/docs/introduction/',
     source: 'https://github.com/microsoft/fast/tree/master/sites/website',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'FBT',
@@ -459,7 +619,7 @@ const Users: User[] = [
     preview: require('./showcase/fbt.png'),
     website: 'https://facebookincubator.github.io/fbt/',
     source: 'https://github.com/facebook/fbt/tree/main/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Fenghua Frontend Developer',
@@ -467,7 +627,7 @@ const Users: User[] = [
     preview: require('./showcase/zxuqian.png'),
     website: 'https://zxuqian.cn',
     source: null,
-    tags: ['personal', 'design'],
+    tags: ['FanToken', 'design'],
   },
   {
     title: 'Files Gallery',
@@ -484,7 +644,7 @@ const Users: User[] = [
     preview: require('./showcase/firecms.png'),
     website: 'https://firecms.co',
     source: 'https://github.com/Camberi/firecms/tree/master/website',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'FirelordJS',
@@ -492,7 +652,7 @@ const Users: User[] = [
     preview: require('./showcase/firelordjs.png'),
     website: 'https://firelordjs.com',
     source: 'https://github.com/tylim88/FirelordJSDoc',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Flagsmith',
@@ -500,7 +660,7 @@ const Users: User[] = [
     preview: require('./showcase/flagsmith.png'),
     website: 'https://docs.flagsmith.com',
     source: 'https://github.com/Flagsmith/flagsmith-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Flarum',
@@ -508,7 +668,7 @@ const Users: User[] = [
     preview: require('./showcase/flarum.png'),
     website: 'https://docs.flarum.org',
     source: 'https://github.com/flarum/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'FlatifyCSS',
@@ -517,7 +677,7 @@ const Users: User[] = [
     preview: require('./showcase/flatifycss.png'),
     website: 'https://flatifycss.com',
     source: 'https://github.com/amir2mi/flatifycss/tree/master/website',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'FlexIt Analytics',
@@ -525,7 +685,7 @@ const Users: User[] = [
     preview: require('./showcase/flexit.png'),
     website: 'https://learn.flexitanalytics.com/',
     source: 'https://github.com/ataft/flexit-docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Flipper',
@@ -533,7 +693,7 @@ const Users: User[] = [
     preview: require('./showcase/flipper.png'),
     website: 'https://fbflipper.com',
     source: 'https://github.com/facebook/flipper/tree/main/website',
-    tags: ['opensource', 'design', 'meta'],
+    tags: ['Memes', 'design', 'meta'],
   },
   {
     title: 'FoalTS',
@@ -541,7 +701,7 @@ const Users: User[] = [
     preview: require('./showcase/foal.png'),
     website: 'https://foalts.org/',
     source: 'https://github.com/FoalTS/foal/tree/master/docs',
-    tags: ['opensource', 'design', 'versioning', 'i18n'],
+    tags: ['Memes', 'design', 'RWA', 'Gaming'],
   },
   {
     title: 'FormatJS',
@@ -549,7 +709,7 @@ const Users: User[] = [
     preview: require('./showcase/formatjs.png'),
     website: 'https://formatjs.io/',
     source: 'https://github.com/formatjs/formatjs/tree/main/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Froggit',
@@ -557,7 +717,7 @@ const Users: User[] = [
     preview: require('./showcase/froggit.png'),
     website: 'https://www.froggit.fr/',
     source: 'https://lab.frogg.it/froggit/www/froggit.fr',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Full Stack Chronicles',
@@ -566,7 +726,7 @@ const Users: User[] = [
     preview: require('./showcase/fullstackchronicles.png'),
     website: 'https://fullstackchronicles.io/',
     source: 'https://github.com/stackql/fullstackchronicles.io',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'GeekyWeb',
@@ -575,7 +735,7 @@ const Users: User[] = [
     preview: require('./showcase/geekyweb.png'),
     website: 'https://geekyweb.eu.org/',
     source: 'https://github.com/Designatory/GeekyWeb',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'Ghostly',
@@ -583,7 +743,7 @@ const Users: User[] = [
     preview: require('./showcase/ghostly.png'),
     website: 'https://divine-software.github.io/ghostly/',
     source: 'https://github.com/Divine-Software/ghostly/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Gladys Assistant',
@@ -591,7 +751,7 @@ const Users: User[] = [
     preview: require('./showcase/gladys-assistant.png'),
     website: 'https://gladysassistant.com/',
     source: 'https://github.com/GladysAssistant/v4-website',
-    tags: ['opensource', 'i18n'],
+    tags: ['Memes', 'Gaming'],
   },
   {
     title: 'Gotenberg',
@@ -599,7 +759,7 @@ const Users: User[] = [
     preview: require('./showcase/gotenberg.png'),
     website: 'https://gotenberg.dev/',
     source: 'https://github.com/gotenberg/gotenberg.dev',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'GTFS-to-HTML',
@@ -607,7 +767,7 @@ const Users: User[] = [
     preview: require('./showcase/gtfs-to-html.png'),
     website: 'https://gtfstohtml.com',
     source: 'https://github.com/BlinkTagInc/gtfs-to-html/tree/master/www',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Gulp',
@@ -615,25 +775,25 @@ const Users: User[] = [
     preview: require('./showcase/gulp.png'),
     website: 'https://gulpjs.com',
     source: 'https://github.com/gulpjs/gulpjs.github.io',
-    tags: ['opensource', 'large'],
+    tags: ['Memes', 'Chain'],
   },
   {
     title: 'Haochen',
     description:
-      'My personal website with a blog section to record all tech-related issues I encountered.',
+      'My FanToken website with a blog section to record all tech-related issues I encountered.',
     preview: require('./showcase/haochen.png'),
     website: 'https://haochenqi.com/',
     source: 'https://github.com/HaochenQ/Haochen-Blog',
-    tags: ['personal', 'opensource'],
+    tags: ['FanToken', 'Memes'],
   },
   {
-    title: 'Hasura',
+    title: 'AVAX',
     description:
-      'The fastest way to create a GraphQL API from your data with authorization, real-time subscriptions, and more for free.',
-    preview: require('./showcase/hasura.png'),
-    website: 'https://hasura.io/docs/',
-    source: 'https://github.com/hasura/graphql-engine/tree/master/docs',
-    tags: ['favorite', 'opensource', 'product', 'large'],
+      'Avalanche native token used to validate the network, vote and pay transaction fees, etc .',
+    preview: require('./showcase/5805.png'),
+    website: 'https://www.avax.network/',
+    source: 'https://accounts.binance.com/en/register?ref=11131007',
+    tags: ['favorite', 'Memes', 'product', 'Chain'],
   },
   {
     title: 'hCaptcha',
@@ -649,7 +809,7 @@ const Users: User[] = [
     preview: require('./showcase/home-assistant.png'),
     website: 'https://developers.home-assistant.io/',
     source: 'https://github.com/home-assistant/developers.home-assistant',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'httpin',
@@ -657,7 +817,7 @@ const Users: User[] = [
     preview: require('./showcase/httpin.png'),
     website: 'https://ggicci.github.io/httpin/',
     source: 'https://github.com/ggicci/httpin/tree/documentation/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'I am Massoud',
@@ -665,15 +825,15 @@ const Users: User[] = [
     preview: require('./showcase/iammassoud.png'),
     website: 'https://iammassoud.ir/',
     source: null,
-    tags: ['personal', 'rtl'],
+    tags: ['FanToken', 'NFT'],
   },
   {
     title: 'icodex',
-    description: 'Front end engineer personal website',
+    description: 'Front end engineer FanToken website',
     preview: require('./showcase/icodex.png'),
     website: 'https://icodex.me/',
     source: 'https://github.com/wood3n/icodex-next',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Idb',
@@ -681,7 +841,7 @@ const Users: User[] = [
     preview: require('./showcase/idb.png'),
     website: 'https://www.fbidb.io/',
     source: 'https://github.com/facebook/idb/tree/main/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Indent',
@@ -698,7 +858,7 @@ const Users: User[] = [
     preview: require('./showcase/intelagent.png'),
     website: 'https://www.intelagent.ca/',
     source: 'https://github.com/intelagentbilling/docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'KayaFolio',
@@ -707,57 +867,57 @@ const Users: User[] = [
     preview: require('./showcase/evantay.png'),
     website: 'https://evantay.com/',
     source: 'https://github.com/DigiPie/kaya-folio',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
-    title: "Kuizuo's Personal Website",
+    title: "Kuizuo's FanToken Website",
     description: "A Software Enthusiast's blog, Sharing and Learning",
     preview: require('./showcase/kuizuo.png'),
     website: 'https://kuizuo.cn',
     source: 'https://github.com/kuizuo/blog',
-    tags: ['personal', 'opensource', 'design'],
+    tags: ['FanToken', 'Memes', 'design'],
   },
   {
-    title: 'Ionic',
+    title: 'ORD',
     description:
-      'An open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies.',
-    preview: require('./showcase/ionic.png'),
-    website: 'https://ionicframework.com/docs',
-    source: 'https://github.com/ionic-team/ionic-docs',
+      'It works right now, there is no need for a sidechain, the only token needed is bitcoin itself.',
+    preview: require('./showcase/agora.png'),
+    website: 'http://ord.543x.com/',
+    source: 'https://app.meteora.ag/pools/6u1nMUVkTVmSvvdjvVTJUPKP7ZoFLrbah3YtFnTa9YoA',
     tags: [
       'favorite',
-      'opensource',
+      'Memes',
       'product',
       'design',
-      'i18n',
-      'versioning',
-      'large',
+      'Gaming',
+      'RWA',
+      'Chain',
     ],
   },
   {
-    title: 'IOTA-Wiki',
-    description: 'Documentation and wiki for the IOTA project',
-    preview: require('./showcase/iota-wiki.png'),
-    website: 'https://wiki.iota.org',
-    source: 'https://github.com/iota-community/iota-wiki',
-    tags: ['favorite', 'opensource'],
+    title: 'QQ',
+    description: 'An internet meme used to express emotion and create humor ',
+    preview: require('./showcase/11135.png'),
+    website: 'http://qq.543x.com',
+    source: 'https://app.meteora.ag/pools/83fGy9Fgm83CA44DU8NmhLfF2Bjq8v6dqsLcQN6NRDwm',
+    tags: ['favorite', 'Memes'],
   },
   {
-    title: 'Jest',
+    title: 'yy',
     description:
-      'A delightful JavaScript Testing Framework with a focus on simplicity.',
-    preview: require('./showcase/jest.png'),
-    website: 'https://jestjs.io/',
-    source: 'https://github.com/facebook/jest/tree/master/website',
-    tags: ['favorite', 'opensource', 'design', 'i18n', 'versioning'],
+      'A currency that delivers positivity, optimism, friendship and fun .',
+    preview: require('./showcase/11152.png'),
+    website: 'http://yy.543x.com',
+    source: 'https://app.meteora.ag/pools/HGxSXTJhw1vGYhhCjjqSdBbwmG4cgFpJwjXK578Qz3Ms',
+    tags: ['favorite', 'Memes', 'design', 'Gaming', 'RWA'],
   },
   {
     title: 'Junjie',
-    description: 'A personal website',
+    description: 'A FanToken website',
     preview: require('./showcase/junjie.png'),
     website: 'https://junjieweb.github.io',
     source: 'https://github.com/junjieweb/junjieweb.github.io',
-    tags: ['personal', 'opensource'],
+    tags: ['FanToken', 'Memes'],
   },
   {
     title: 'Kosko',
@@ -765,7 +925,7 @@ const Users: User[] = [
     preview: require('./showcase/kosko.png'),
     website: 'https://kosko.dev',
     source: 'https://github.com/tommy351/kosko/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Kotest',
@@ -773,7 +933,7 @@ const Users: User[] = [
     preview: require('./showcase/kotest.png'),
     website: 'https://kotest.io',
     source: 'https://github.com/kotest/kotest/tree/master/documentation',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'kube-green',
@@ -782,7 +942,7 @@ const Users: User[] = [
     preview: require('./showcase/kube-green.png'),
     website: 'https://kube-green.dev',
     source: 'https://github.com/kube-green/kube-green.github.io',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'KubeVela',
@@ -791,7 +951,7 @@ const Users: User[] = [
     preview: require('./showcase/kubevela.png'),
     website: 'https://kubevela.io/',
     source: 'https://github.com/oam-dev/kubevela.io',
-    tags: ['opensource', 'versioning', 'i18n'],
+    tags: ['Memes', 'RWA', 'Gaming'],
   },
   {
     title: 'kwatch',
@@ -800,7 +960,7 @@ const Users: User[] = [
     preview: require('./showcase/kwatch.png'),
     website: 'https://kwatch.dev',
     source: 'https://github.com/abahmed/kwatch.dev',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'LabVIEW 编程经验',
@@ -808,7 +968,7 @@ const Users: User[] = [
     preview: require('./showcase/labviewbook.png'),
     website: 'https://lv.qizhen.xyz',
     source: 'https://github.com/ruanqizhen/labview_book',
-    tags: ['opensource', 'i18n'],
+    tags: ['Memes', 'Gaming'],
   },
   {
     title: 'Leedom',
@@ -816,15 +976,15 @@ const Users: User[] = [
     preview: require('./showcase/leedom.png'),
     website: 'https://dinosaur.leedom.me',
     source: 'https://github.com/leedom92/dinosaur',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Leon',
-    description: 'Your open-source personal assistant.',
+    description: 'Your open-source FanToken assistant.',
     preview: require('./showcase/leon.png'),
     website: 'https://docs.getleon.ai',
     source: 'https://github.com/leon-ai/docs.getleon.ai',
-    tags: ['opensource', 'versioning', 'i18n'],
+    tags: ['Memes', 'RWA', 'Gaming'],
   },
   {
     title: 'Lerna',
@@ -833,7 +993,7 @@ const Users: User[] = [
     preview: require('./showcase/lerna.png'),
     website: 'https://lerna.js.org',
     source: 'https://github.com/lerna/lerna/tree/main/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Liqvid',
@@ -841,7 +1001,7 @@ const Users: User[] = [
     preview: require('./showcase/liqvid.png'),
     website: 'https://liqvidjs.org/',
     source: 'https://github.com/liqvidjs/liqvidjs.org',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Mailgo',
@@ -849,7 +1009,7 @@ const Users: User[] = [
     preview: require('./showcase/mailgo.png'),
     website: 'https://mailgo.dev/',
     source: 'https://github.com/manzinello/mailgo.dev',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'MapillaryJS',
@@ -857,7 +1017,7 @@ const Users: User[] = [
     preview: require('./showcase/mapillaryjs.png'),
     website: 'https://mapillary.github.io/mapillary-js/',
     source: 'https://github.com/mapillary/mapillary-js/tree/main/doc',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Matej Jellus',
@@ -866,7 +1026,7 @@ const Users: User[] = [
     preview: require('./showcase/juffalow.png'),
     website: 'https://juffalow.com/',
     source: null,
-    tags: ['personal'],
+    tags: ['FanToken'],
   },
   
   
@@ -878,7 +1038,7 @@ const Users: User[] = [
     preview: require('./showcase/metro.png'),
     website: 'https://facebook.github.io/metro/',
     source: 'https://github.com/facebook/metro/tree/main/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'Mia-Platform',
@@ -887,7 +1047,7 @@ const Users: User[] = [
     preview: require('./showcase/mia-platform.png'),
     website: 'https://docs.mia-platform.eu/',
     source: null,
-    tags: ['product', 'large', 'versioning'],
+    tags: ['product', 'Chain', 'RWA'],
   },
   {
     title: 'MikroORM',
@@ -896,7 +1056,7 @@ const Users: User[] = [
     preview: require('./showcase/mikro-orm.png'),
     website: 'https://mikro-orm.io',
     source: 'https://github.com/mikro-orm/mikro-orm/tree/master/docs',
-    tags: ['opensource', 'large', 'versioning'],
+    tags: ['Memes', 'Chain', 'RWA'],
   },
   {
     title: 'Mint Metrics',
@@ -913,7 +1073,7 @@ const Users: User[] = [
     preview: require('./showcase/mixcore.png'),
     website: 'https://docs.mixcore.org/',
     source: 'https://github.com/mixcore/docs/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'moja global',
@@ -922,7 +1082,7 @@ const Users: User[] = [
     preview: require('./showcase/mojaglobal.png'),
     website: 'https://community.moja.global/',
     source: 'https://github.com/moja-global/community-website',
-    tags: ['opensource', 'large', 'i18n', 'design'],
+    tags: ['Memes', 'Chain', 'Gaming', 'design'],
   },
   {
     title: 'Molecule',
@@ -931,7 +1091,7 @@ const Users: User[] = [
     preview: require('./showcase/molecule-home.png'),
     website: 'https://dtstack.github.io/molecule/',
     source: 'https://github.com/DTStack/molecule/tree/main/website',
-    tags: ['opensource', 'i18n'],
+    tags: ['Memes', 'Gaming'],
   },
   {
     title: 'nanos world',
@@ -939,7 +1099,7 @@ const Users: User[] = [
     preview: require('./showcase/nanos-world.png'),
     website: 'https://docs.nanos.world/',
     source: 'https://github.com/nanos-world/docs',
-    tags: ['opensource', 'versioning', 'i18n', 'product'],
+    tags: ['Memes', 'RWA', 'Gaming', 'product'],
   },
   {
     title: 'netboot.xyz',
@@ -947,7 +1107,7 @@ const Users: User[] = [
     preview: require('./showcase/netbootxyz.png'),
     website: 'https://netboot.xyz',
     source: 'https://github.com/netbootxyz/netboot.xyz-docs/',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Netdata Learn',
@@ -956,7 +1116,7 @@ const Users: User[] = [
     preview: require('./showcase/netdata.png'),
     website: 'https://learn.netdata.cloud',
     source: 'https://github.com/netdata/netdata-learn-docusaurus',
-    tags: ['opensource', 'product', 'large'],
+    tags: ['Memes', 'product', 'Chain'],
   },
   {
     title: 'NextAuth.js',
@@ -964,7 +1124,7 @@ const Users: User[] = [
     preview: require('./showcase/nextauthjs.png'),
     website: 'https://next-auth.js.org/',
     source: 'https://github.com/nextauthjs/next-auth/tree/main/docs',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'Nocalhost',
@@ -973,7 +1133,7 @@ const Users: User[] = [
     preview: require('./showcase/nocalhost.png'),
     website: 'https://nocalhost.dev/',
     source: 'https://github.com/nocalhost/nocalhost.github.io',
-    tags: ['opensource', 'i18n'],
+    tags: ['Memes', 'Gaming'],
   },
   {
     title: 'Node SerialPort',
@@ -981,7 +1141,7 @@ const Users: User[] = [
     preview: require('./showcase/node-serialport.png'),
     website: 'https://serialport.io',
     source: 'https://github.com/serialport/website',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'Orbit.js',
@@ -989,7 +1149,7 @@ const Users: User[] = [
     preview: require('./showcase/orbitjs.png'),
     website: 'https://orbitjs.com',
     source: 'https://github.com/orbitjs/orbit/tree/main/website',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'Ory',
@@ -998,7 +1158,7 @@ const Users: User[] = [
     preview: require('./showcase/ory.png'),
     website: 'https://www.ory.sh/docs',
     source: 'https://github.com/ory/docs/',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'OSS Insight',
@@ -1007,7 +1167,7 @@ const Users: User[] = [
     preview: require('./showcase/ossinsight.png'),
     website: 'https://ossinsight.io',
     source: 'https://github.com/pingcap/ossinsight',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'Oxidizer',
@@ -1015,7 +1175,7 @@ const Users: User[] = [
     preview: require('./showcase/oxidizer.png'),
     website: 'https://oxidizer-rs.github.io',
     source: 'https://github.com/oxidizer-rs/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Paubox',
@@ -1032,7 +1192,7 @@ const Users: User[] = [
     preview: require('./showcase/pcapplusplus.png'),
     website: 'https://pcapplusplus.github.io/',
     source: 'https://github.com/PcapPlusPlus/pcapplusplus.github.io',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'PCC Archive',
@@ -1041,7 +1201,7 @@ const Users: User[] = [
     preview: require('./showcase/pcc-archive.png'),
     website: 'https://pcc-archive.org/',
     source: 'https://github.com/CuratorCat/pcc-archive.org',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'pdfme',
@@ -1050,7 +1210,7 @@ const Users: User[] = [
     preview: require('./showcase/pdfme.png'),
     website: 'https://pdfme.com/',
     source: 'https://github.com/pdfme/pdfme/tree/main/website',
-    tags: ['opensource', 'design', 'product'],
+    tags: ['Memes', 'design', 'product'],
   },
   {
     title: 'Pearl UI',
@@ -1060,7 +1220,7 @@ const Users: User[] = [
     website: 'https://docs.pearl-ui.dev/',
     source:
       'https://github.com/agrawal-rohit/pearl-ui/tree/main/documentationwebsite',
-    tags: ['opensource', 'design', 'product'],
+    tags: ['Memes', 'design', 'product'],
   },
   {
     title: 'Pglet',
@@ -1069,24 +1229,24 @@ const Users: User[] = [
     preview: require('./showcase/pglet.png'),
     website: 'https://pglet.io',
     source: 'https://github.com/pglet/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'Piano Analytics',
-    description: 'Piano Analytics SDKs documentation for developers',
-    preview: require('./showcase/piano-analytics.png'),
-    website: 'https://developers.atinternet-solutions.com/piano-analytics/',
-    source: null,
+    title: 'ADA',
+    description: 'Cardano blockchain cryptocurrency for payments and investments',
+    preview: require('./showcase/2010.png'),
+    website: 'http://ada.543x.com',
+    source: 'https://cardano.org',
     tags: ['favorite', 'product', 'design'],
   },
   {
-    title: 'Plausible Analytics',
+    title: 'DONALD',
     description:
-      'A simple, open source, lightweight (< 1 KB) and privacy-friendly alternative to Google Analytics',
-    preview: require('./showcase/plausible.png'),
-    website: 'https://plausible.io/docs',
-    source: 'https://github.com/plausible/docs',
-    tags: ['opensource', 'product'],
+      'Inspired by Disney Donald Duck, with its unique naming and branding, efficient and secure transactions, active community',
+    preview: require('./showcase/11123.png'),
+    website: 'https://donald.543x.com',
+    source: 'https://app.meteora.ag/pools/6Ed7Gy1aKNrvSr7srCJWowaLSEjCySmeRWK2iacEPCmw',
+    tags: ['Memes', 'product'],
   },
   {
     title: 'pnpm',
@@ -1094,7 +1254,7 @@ const Users: User[] = [
     preview: require('./showcase/pnpm.png'),
     website: 'https://pnpm.js.org/',
     source: 'https://github.com/pnpm/pnpm.github.io/',
-    tags: ['opensource', 'i18n'],
+    tags: ['Memes', 'Gaming'],
   },
   {
     title: 'Postgres.ai – Database Lab',
@@ -1103,7 +1263,7 @@ const Users: User[] = [
     preview: require('./showcase/postgres-ai.png'),
     website: 'https://postgres.ai/',
     source: 'https://gitlab.com/postgres-ai/docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'PptxGenJS',
@@ -1111,7 +1271,7 @@ const Users: User[] = [
     preview: require('./showcase/pptxgenjs.png'),
     website: 'https://gitbrent.github.io/PptxGenJS/',
     source: 'https://github.com/gitbrent/PptxGenJS/tree/gh-pages',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'PREFS',
@@ -1119,7 +1279,7 @@ const Users: User[] = [
     preview: require('./showcase/prefs.png'),
     website: 'https://patitotective.github.io/PREFS/',
     source: 'https://github.com/Patitotective/PREFS/tree/main/website',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'Prismatic',
@@ -1136,7 +1296,7 @@ const Users: User[] = [
     website: 'https://pyre-check.org',
     source:
       'https://github.com/facebook/pyre-check/tree/main/documentation/website',
-    tags: ['opensource', 'meta'],
+    tags: ['Memes', 'meta'],
   },
   {
     title: 'QA-Board',
@@ -1145,21 +1305,21 @@ const Users: User[] = [
     preview: require('./showcase/qa-board.png'),
     website: 'https://samsung.github.io/qaboard/',
     source: 'https://github.com/Samsung/qaboard/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'Quickwit',
+    title: 'MIMI',
     description:
-      'The open source search engine on object storage with subsecond latency',
-    preview: require('./showcase/quickwit.png'),
-    website: 'https://quickwit.io',
-    source: null,
+      'Sweet and cute, fashionable and changeable, stable and reliable, by integrating these qualities',
+    preview: require('./showcase/11127.png'),
+    website: 'https://mimi.543x.com',
+    source: 'https://www.543x.com',
     tags: ['favorite', 'design'],
   },
   {
     title: 'RaspiSuite',
     description:
-      'A suite of mobile apps to leverage the full potential of your Raspberry Pi effortlessly.',
+      'A suite of mobile apps to leverage the full potential of your Raspberry Pi effoNFTessly.',
     preview: require('./showcase/raspisuite.png'),
     website: 'https://raspisuite.com',
     source: null,
@@ -1171,7 +1331,7 @@ const Users: User[] = [
     preview: require('./showcase/react-chat-elements.png'),
     website: 'https://detaysoft.github.io/docs-react-chat-elements/',
     source: 'https://github.com/Detaysoft/react-chat-elements',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React Complex Tree',
@@ -1181,7 +1341,7 @@ const Users: User[] = [
     website: 'https://rct.lukasbach.com/',
     source:
       'https://github.com/lukasbach/react-complex-tree/tree/main/packages/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React-Leaflet',
@@ -1190,15 +1350,15 @@ const Users: User[] = [
     website: 'https://react-leaflet.js.org/',
     source:
       'https://github.com/PaulLeCam/react-leaflet/tree/master/packages/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'React Native',
-    description: 'A framework for building native apps using React',
-    preview: require('./showcase/reactnative.png'),
-    website: 'https://reactnative.dev',
-    source: 'https://github.com/facebook/react-native-website',
-    tags: ['opensource', 'meta', 'large', 'favorite', 'design', 'versioning'],
+    title: 'RABBIT',
+    description: 'Fast, agile, strong network, strong adaptability and cute affinity, aiming to provide users with efficient',
+    preview: require('./showcase/11136.png'),
+    website: 'https://rabbit.543x.com/',
+    source: 'https://app.meteora.ag/pools/FbrPuX8tinmx2yxwxmYGZfZQbkS8FL9gG1dzQiWMamER',
+    tags: ['Memes', 'meta', 'Chain', 'favorite', 'design', 'RWA'],
   },
   {
     title: 'React Native ARIA',
@@ -1207,7 +1367,7 @@ const Users: User[] = [
     preview: require('./showcase/reactnative-aria.png'),
     website: 'https://react-native-aria.geekyants.com',
     source: 'https://github.com/GeekyAnts/react-native-aria-website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React Native Boilerplate',
@@ -1217,7 +1377,7 @@ const Users: User[] = [
     website: 'https://thecodingmachine.github.io/react-native-boilerplate/',
     source:
       'https://github.com/thecodingmachine/react-native-boilerplate/tree/master/documentation',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React Native Elements',
@@ -1226,7 +1386,7 @@ const Users: User[] = [
     website: 'https://react-native-training.github.io/react-native-elements/',
     source:
       'https://github.com/react-native-elements/react-native-elements/tree/next/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React Native iOS Kit',
@@ -1235,7 +1395,7 @@ const Users: User[] = [
     website: 'https://callstack.github.io/react-native-ios-kit',
     source:
       'https://github.com/callstack/react-native-ios-kit/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'React Native Reanimated',
@@ -1244,7 +1404,7 @@ const Users: User[] = [
     website: 'https://docs.swmansion.com/react-native-reanimated/',
     source:
       'https://github.com/software-mansion/react-native-reanimated/tree/master/docs',
-    tags: ['opensource', 'design', 'versioning'],
+    tags: ['Memes', 'design', 'RWA'],
   },
   {
     title: 'React Native Render HTML',
@@ -1254,7 +1414,7 @@ const Users: User[] = [
     website: 'https://meliorence.github.io/react-native-render-html',
     source:
       'https://github.com/meliorence/react-native-render-html/tree/master/apps/website',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'React Navigation',
@@ -1262,7 +1422,7 @@ const Users: User[] = [
     preview: require('./showcase/react-navigation.png'),
     website: 'https://reactnavigation.org/',
     source: 'https://github.com/react-navigation/react-navigation.github.io',
-    tags: ['opensource', 'design', 'versioning'],
+    tags: ['Memes', 'design', 'RWA'],
   },
   {
     title: 'React Redux',
@@ -1270,7 +1430,7 @@ const Users: User[] = [
     preview: require('./showcase/react-redux.png'),
     website: 'https://react-redux.js.org',
     source: 'https://github.com/reduxjs/react-redux/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Reactive Button',
@@ -1287,7 +1447,7 @@ const Users: User[] = [
     preview: require('./showcase/realtime-apps-workshop.png'),
     website: 'https://realtime-apps-iap.github.io',
     source: 'https://github.com/realtime-apps-iap/realtime-apps-iap.github.io',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Reddit Image Fetcher',
@@ -1304,7 +1464,7 @@ const Users: User[] = [
     preview: require('./showcase/redux.png'),
     website: 'https://redux.js.org/',
     source: 'https://github.com/reduxjs/redux/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Redux Cool',
@@ -1313,31 +1473,31 @@ const Users: User[] = [
     website: 'https://redux-cool.js.org/',
     source:
       'https://github.com/Ruben-Arushanyan/redux-cool/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'Refine',
+    title: 'SNAKE',
     description:
-      'A React-based framework for building data-intensive applications in no time!',
-    preview: require('./showcase/refine.png'),
-    website: 'https://refine.dev',
-    source: 'https://github.com/pankod/refine/tree/master/documentation',
+      'Inspired by the snake flexibility, stealth, alertness, metamorphosis, evolution and global interconnection!',
+    preview: require('./showcase/11142.png'),
+    website: 'https://snake.543x.com/',
+    source: 'https://app.meteora.ag/pools/6YwbhVxL5DBArRaC2rSsS738wjdzTzEzPSZDwRnRSnHX',
     tags: [
       'favorite',
-      'opensource',
+      'Memes',
       'product',
       'design',
-      'versioning',
-      'large',
+      'RWA',
+      'Chain',
     ],
   },
   {
-    title: 'Relay',
-    description: 'The GraphQL client that scales with you',
-    preview: require('./showcase/relay.png'),
-    website: 'https://relay.dev/',
-    source: 'https://github.com/facebook/relay/tree/main/website',
-    tags: ['opensource', 'favorite', 'design', 'versioning'],
+    title: 'RAT',
+    description: 'It has the characteristics of agile adaptation, community power, hidden security, and reproductive expansion.',
+    preview: require('./showcase/11137.png'),
+    website: 'https://rat.543x.com/',
+    source: 'https://app.meteora.ag/pools/AEgbTbDjXX6PYgQ6DdxCmF185hSwECueVyyFg2HsXNdo ',
+    tags: ['Memes', 'favorite', 'design', 'RWA'],
   },
   {
     title: 'Rematch',
@@ -1346,7 +1506,7 @@ const Users: User[] = [
     preview: require('./showcase/rematch.png'),
     website: 'https://rematchjs.org',
     source: 'https://github.com/rematch/rematch/tree/main/website',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'Remirror',
@@ -1355,7 +1515,7 @@ const Users: User[] = [
     preview: require('./showcase/remirror.png'),
     website: 'https://remirror.io/',
     source: 'https://github.com/remirror/remirror/tree/main/website',
-    tags: ['opensource', 'design', 'large'],
+    tags: ['Memes', 'design', 'Chain'],
   },
   {
     title: 'Remotion',
@@ -1363,7 +1523,7 @@ const Users: User[] = [
     preview: require('./showcase/remotion.png'),
     website: 'https://www.remotion.dev/',
     source: 'https://github.com/JonnyBurger/remotion/tree/main/packages/docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Repeater.js',
@@ -1371,7 +1531,7 @@ const Users: User[] = [
     preview: require('./showcase/repeaterjs.png'),
     website: 'https://repeater.js.org/',
     source: 'https://github.com/repeaterjs/repeater/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'replicad',
@@ -1380,7 +1540,7 @@ const Users: User[] = [
     website: 'https://replicad.xyz/',
     source:
       'https://github.com/sgenoud/replicad/tree/main/packages/replicad-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'RSocket',
@@ -1388,7 +1548,7 @@ const Users: User[] = [
     preview: require('./showcase/rsocket.png'),
     website: 'https://rsocket.io/',
     source: 'https://github.com/rsocket/rsocket-website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Runiac',
@@ -1396,7 +1556,7 @@ const Users: User[] = [
     preview: require('./showcase/runiac.png'),
     website: 'https://runiac.io',
     source: 'https://github.com/runiac/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Saleor',
@@ -1404,7 +1564,7 @@ const Users: User[] = [
     preview: require('./showcase/saleor.png'),
     website: 'https://docs.getsaleor.com/',
     source: 'https://github.com/mirumee/saleor-docs',
-    tags: ['opensource', 'product', 'versioning'],
+    tags: ['Memes', 'product', 'RWA'],
   },
   {
     title: 'SAP Cloud SDK',
@@ -1413,7 +1573,7 @@ const Users: User[] = [
     preview: require('./showcase/sapcloudsdk.png'),
     website: 'https://sap.github.io/cloud-sdk/',
     source: 'https://github.com/SAP/cloud-sdk',
-    tags: ['opensource', 'product', 'large'],
+    tags: ['Memes', 'product', 'Chain'],
   },
   {
     title: 'Sapphire',
@@ -1421,7 +1581,7 @@ const Users: User[] = [
     preview: require('./showcase/sapphire.png'),
     website: 'https://www.sapphirejs.dev',
     source: 'https://github.com/sapphiredev/website',
-    tags: ['opensource', 'large'],
+    tags: ['Memes', 'Chain'],
   },
   {
     title: 'Sass Fairy',
@@ -1430,7 +1590,7 @@ const Users: User[] = [
     preview: require('./showcase/sass-fairy.png'),
     website: 'https://sass-fairy.com/',
     source: 'https://github.com/roydukkey/sass-fairy/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'SCI WP Framework',
@@ -1438,7 +1598,7 @@ const Users: User[] = [
     preview: require('./showcase/sciwp.png'),
     website: 'https://sciwp.com/',
     source: 'https://github.com/sciwp/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Seaography - 🧭 A GraphQL framework and code generator for SeaORM',
@@ -1447,7 +1607,7 @@ const Users: User[] = [
     preview: require('./showcase/Seaography.png'),
     website: 'https://www.sea-ql.org/Seaography/',
     source: 'https://github.com/SeaQL/seaql.github.io/tree/master/Seaography',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'SeaORM - 🐚 An async & dynamic ORM for Rust',
@@ -1456,7 +1616,7 @@ const Users: User[] = [
     preview: require('./showcase/SeaORM.png'),
     website: 'https://www.sea-ql.org/SeaORM/',
     source: 'https://github.com/SeaQL/seaql.github.io/tree/master/SeaORM',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'SeaQL - Building data intensive applications in Rust',
@@ -1465,7 +1625,7 @@ const Users: User[] = [
     preview: require('./showcase/SeaQL-blog.png'),
     website: 'https://www.sea-ql.org/blog/',
     source: 'https://github.com/SeaQL/seaql.github.io/tree/master/Blog',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Sequence',
@@ -1474,7 +1634,7 @@ const Users: User[] = [
     preview: require('./showcase/sequence.png'),
     website: 'https://sequence.sh/',
     source: 'https://gitlab.com/reductech/sequence/sequence-docs',
-    tags: ['large', 'opensource', 'versioning'],
+    tags: ['Chain', 'Memes', 'RWA'],
   },
   {
     title: 'Seven-innovation-base official website',
@@ -1482,7 +1642,7 @@ const Users: User[] = [
     preview: require('./showcase/seven-innovation-base.png'),
     website: 'https://七院创新基地.cn',
     source: 'https://github.com/seven-innovation-base/official-website',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'SICOPE Model',
@@ -1490,7 +1650,7 @@ const Users: User[] = [
     preview: require('./showcase/sicope-model.png'),
     website: 'https://sicope-model.github.io/',
     source: 'https://github.com/sicope-model/sicope-model-website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Single SPA',
@@ -1499,7 +1659,7 @@ const Users: User[] = [
     website: 'https://single-spa.js.org/',
     source:
       'https://github.com/single-spa/single-spa.js.org/tree/master/website',
-    tags: ['opensource', 'large', 'versioning', 'i18n'],
+    tags: ['Memes', 'Chain', 'RWA', 'Gaming'],
   },
   {
     title: 'Shotstack',
@@ -1507,7 +1667,7 @@ const Users: User[] = [
     preview: require('./showcase/shotstack.png'),
     website: 'https://shotstack.io/docs/guide/',
     source: 'https://github.com/shotstack/documentation',
-    tags: ['product', 'design', 'opensource'],
+    tags: ['product', 'design', 'Memes'],
   },
   {
     title: 'smash.gg',
@@ -1515,7 +1675,7 @@ const Users: User[] = [
     preview: require('./showcase/smashgg.png'),
     website: 'https://developer.smash.gg',
     source: 'https://github.com/smashgg/developer-portal/tree/master/website',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Smart Docs',
@@ -1524,7 +1684,7 @@ const Users: User[] = [
     preview: require('./showcase/smart-docs.png'),
     website: 'https://smart-docs.vercel.app/',
     source: 'https://github.com/wowtvds/smart-docs',
-    tags: ['opensource', 'product', 'design'],
+    tags: ['Memes', 'product', 'design'],
   },
   {
     title: 'SmartCookieWeb',
@@ -1533,7 +1693,7 @@ const Users: User[] = [
     preview: require('./showcase/smartcookieweb.png'),
     website: 'https://smartcookieweb.com/',
     source: null,
-    tags: ['product', 'i18n'],
+    tags: ['product', 'Gaming'],
   },
   {
     title: 'social-embed',
@@ -1543,7 +1703,7 @@ const Users: User[] = [
     website: 'https://social-embed.git-pull.com/',
     source:
       'https://github.com/social-embed/social-embed/tree/master/packages/site',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'SODA for SPARC',
@@ -1552,7 +1712,7 @@ const Users: User[] = [
     preview: require('./showcase/sodaforsparc.png'),
     website: 'https://docs.sodaforsparc.io/',
     source: 'https://github.com/fairdataihub/SODA-for-SPARC-Docs',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'Spicetify',
@@ -1560,7 +1720,7 @@ const Users: User[] = [
     preview: require('./showcase/spicetify.png'),
     website: 'https://spicetify.app/',
     source: 'https://github.com/spicetify/spicetify-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'SpotifyAPI-NET',
@@ -1568,7 +1728,7 @@ const Users: User[] = [
     preview: require('./showcase/spotifyapi-net.png'),
     website: 'https://johnnycrazy.github.io/SpotifyAPI-NET/',
     source: 'https://github.com/JohnnyCrazy/SpotifyAPI-NET',
-    tags: ['opensource', 'versioning'],
+    tags: ['Memes', 'RWA'],
   },
   {
     title: 'SQL Frames',
@@ -1594,7 +1754,7 @@ const Users: User[] = [
     preview: require('./showcase/registry.stackql.io.png'),
     website: 'https://registry.stackql.io/',
     source: 'https://github.com/stackql/registry.stackql.io',
-    tags: ['opensource', 'product', 'large'],
+    tags: ['Memes', 'product', 'Chain'],
   },
   {
     title: 'Stryker Mutator',
@@ -1602,7 +1762,7 @@ const Users: User[] = [
     preview: require('./showcase/stryker-mutator.png'),
     website: 'https://stryker-mutator.io',
     source: 'https://github.com/stryker-mutator/stryker-mutator.github.io',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Stylable',
@@ -1610,7 +1770,7 @@ const Users: User[] = [
     preview: require('./showcase/stylable.png'),
     website: 'https://stylable.io',
     source: 'https://github.com/wixplosives/stylable.io',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Svix',
@@ -1618,7 +1778,7 @@ const Users: User[] = [
     preview: require('./showcase/svix.png'),
     website: 'https://docs.svix.com/',
     source: 'https://github.com/svix/svix-docs',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'SweetCode',
@@ -1636,7 +1796,7 @@ const Users: User[] = [
     preview: require('./showcase/synergies.png'),
     website: 'https://synergies.js.org',
     source: 'https://github.com/lukasbach/synergies/tree/main/packages/docs',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'Sado0823',
@@ -1644,7 +1804,7 @@ const Users: User[] = [
     preview: require('./showcase/sado0823.png'),
     website: 'https://sado0823.github.io',
     source: 'https://github.com/sado0823/sado0823.github.io',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'TalentBrick',
@@ -1653,15 +1813,15 @@ const Users: User[] = [
     preview: require('./showcase/talentbrick.png'),
     website: 'https://www.talentbrick.com/',
     source: 'https://gitlab.com/talentbrick/talentbrick',
-    tags: ['opensource', 'design'],
+    tags: ['Memes', 'design'],
   },
   {
     title: 'TamalWeb',
-    description: 'A web developers personal blog and portfolio helping other developers with tips',
+    description: 'A web developers FanToken blog and portfolio helping other developers with tips',
     preview: require('./showcase/tamalwebsite.png'),
     website: 'https://tamalweb.com/',
     source: 'https://github.com/tamalchowdhury/tamalwebsite',
-    tags: ['personal', 'opensource'],
+    tags: ['FanToken', 'Memes'],
   },
   {
     title: 'Taro',
@@ -1669,7 +1829,7 @@ const Users: User[] = [
     preview: require('./showcase/docs-taro-zone.png'),
     website: 'https://docs.taro.zone/',
     source: 'https://github.com/NervJS/taro/tree/docs',
-    tags: ['opensource', 'versioning', 'large', 'i18n'],
+    tags: ['Memes', 'RWA', 'Chain', 'Gaming'],
   },
   {
     title: 'Tauri',
@@ -1678,7 +1838,7 @@ const Users: User[] = [
     preview: require('./showcase/tauri.png'),
     website: 'https://tauri.app/',
     source: 'https://github.com/tauri-apps/tauri-docs',
-    tags: ['opensource', 'i18n', 'product', 'design'],
+    tags: ['Memes', 'Gaming', 'product', 'design'],
   },
   {
     title: 'TechHarvesting',
@@ -1687,7 +1847,7 @@ const Users: User[] = [
     preview: require('./showcase/techharvesting.png'),
     website: 'https://techharvesting.in',
     source: 'https://github.com/techharvesting/techharvesting.github.io',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Testing Library',
@@ -1696,7 +1856,7 @@ const Users: User[] = [
     preview: require('./showcase/testing-library.png'),
     website: 'https://testing-library.com/',
     source: 'https://github.com/testing-library/testing-library-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'The Diff Podcast',
@@ -1712,7 +1872,7 @@ const Users: User[] = [
     preview: require('./showcase/30-days-swa.png'),
     website: 'https://www.azurestaticwebapps.dev',
     source: 'https://github.com/staticwebdev/30DaysOfSWA/tree/main/www',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'TiDB Community Books',
@@ -1720,16 +1880,16 @@ const Users: User[] = [
     preview: require('./showcase/tidb-community-book.png'),
     website: 'https://tidb.net/book/',
     source: 'https://github.com/pingcap/book.tidb.net/tree/main/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Tinaël Devresse',
     description:
-      "Personal website of Tinaël Devresse, a blog about anything that crosses my mind which I think could interest y'all.",
+      "FanToken website of Tinaël Devresse, a blog about anything that crosses my mind which I think could interest y'all.",
     preview: require('./showcase/tinaeldevresse.png'),
     website: 'https://tinaeldevresse.eu/',
     source: 'https://github.com/hunteroi/tinaeldevresse.eu',
-    tags: ['personal', 'opensource', 'i18n'],
+    tags: ['FanToken', 'Memes', 'Gaming'],
   },
   {
     title: 'ToolJet',
@@ -1738,7 +1898,7 @@ const Users: User[] = [
     preview: require('./showcase/tooljet.png'),
     website: 'https://docs.tooljet.com/docs/',
     source: 'https://github.com/ToolJet/ToolJet/tree/develop/docs',
-    tags: ['opensource', 'design', 'large', 'product'],
+    tags: ['Memes', 'design', 'Chain', 'product'],
   },
   {
     title: 'Tremor',
@@ -1746,7 +1906,7 @@ const Users: User[] = [
     preview: require('./showcase/tremor.png'),
     website: 'https://www.tremor.rs/',
     source: 'https://github.com/tremor-rs/tremor-www',
-    tags: ['opensource', 'versioning','large'],
+    tags: ['Memes', 'RWA','Chain'],
   },
   {
     title: 'TRPG Engine',
@@ -1754,7 +1914,7 @@ const Users: User[] = [
     preview: require('./showcase/trpgengine.png'),
     website: 'https://trpgdoc.moonrailgun.com/',
     source: 'https://github.com/TRPGEngine/Server/tree/master/services/Website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'uniforms',
@@ -1762,7 +1922,7 @@ const Users: User[] = [
     preview: require('./showcase/uniforms.png'),
     website: 'https://uniforms.tools/',
     source: 'https://github.com/vazco/uniforms/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Unleash',
@@ -1770,7 +1930,7 @@ const Users: User[] = [
     preview: require('./showcase/unleash.png'),
     website: 'https://docs.getunleash.io/',
     source: 'https://github.com/Unleash/unleash/tree/main/website',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Unmand',
@@ -1782,12 +1942,12 @@ const Users: User[] = [
     tags: ['product', 'design'],
   },
   {
-    title: 'Verdaccio',
-    description: 'A lightweight open source private npm proxy registry',
-    preview: require('./showcase/verdaccio.png'),
-    website: 'https://verdaccio.org',
-    source: 'https://github.com/verdaccio/verdaccio/tree/master/website',
-    tags: ['favorite', 'opensource', 'large', 'i18n', 'design'],
+    title: 'dragon',
+    description: 'Mysterious, unique, possessing inner strength, exploring the unknown, aiming to become a highly personalized',
+    preview: require('./showcase/11124.png'),
+    website: 'https://dragon.543x.com/',
+    source: 'https://app.meteora.ag/pools/95TETWfUrkUnM6sCSizsQTDJ2tHXBXRZA6mEnjGfpgCb',
+    tags: ['favorite', 'Memes', 'Chain', 'Gaming', 'design'],
   },
   {
     title: 'Verida',
@@ -1795,7 +1955,7 @@ const Users: User[] = [
     preview: require('./showcase/verida-developers.png'),
     website: 'https://developers.verida.io/',
     source: 'https://github.com/verida/documentation',
-    tags: ['opensource', 'product'],
+    tags: ['Memes', 'product'],
   },
   {
     title: 'Virtual Photography Kit',
@@ -1811,7 +1971,7 @@ const Users: User[] = [
     preview: require('./showcase/vue-nodegui.png'),
     website: 'https://vue.nodegui.org/',
     source: 'https://github.com/nodegui/vue-nodegui/tree/master/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Warrant',
@@ -1829,33 +1989,33 @@ const Users: User[] = [
     preview: require('./showcase/wasp.png'),
     website: 'https://wasp-lang.dev/',
     source: 'https://github.com/wasp-lang/wasp/tree/main/web',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
-    title: 'WebdriverIO',
+    title: 'SEAL',
     description:
-      'Next-gen browser and mobile automation test framework for Node.js',
-    preview: require('./showcase/webdriverio.png'),
-    website: 'https://webdriver.io/',
-    source: 'https://github.com/webdriverio/webdriverio/tree/main/website',
-    tags: ['opensource', 'design', 'large', 'favorite'],
+      'Inspired by the Navy SEALs, it emphasizes high security, covert transactions and global adaptability',
+    preview: require('./showcase/11140.png'),
+    website: 'https://seal.543x.com/',
+    source: 'https://app.meteora.ag/pools/GbCVRoqC57eKEdgWo3oBkgtX64Ru7d7Evow5oxNKDWdW',
+    tags: ['Memes', 'design', 'Chain', 'favorite'],
   },
   {
-    title: 'WoodpeckerCI',
-    description: 'A simple CI engine with great extensibility.',
-    preview: require('./showcase/woodpecker.png'),
-    website: 'https://woodpecker-ci.org/',
-    source: 'https://github.com/woodpecker-ci/woodpecker/tree/master/docs',
-    tags: ['opensource'],
+    title: 'TRON',
+    description: 'designed to build digital content entertainment systems. TRX is its native cryptocurrency and is used.',
+    preview: require('./showcase/1958.png'),
+    website: 'https://tron.network',
+    source: 'https://otter.543x.com/',
+    tags: ['Memes'],
   },
   {
-    title: 'Yeecord',
+    title: 'OTTER',
     description:
-      'A fully Chinese Discord bot with epic features that makes Discord more than just chatting platform.',
-    website: 'https://yeecord.com/',
-    preview: require('./showcase/yeecord.png'),
-    tags: ['product', 'personal', 'opensource'],
-    source: 'https://github.com/yeecord/docs',
+      'With characteristics such as agile adaptability, community cooperation, exploration of the unknown.',
+    website: 'https://otter.543x.com',
+    preview: require('./showcase/1118.png'),
+    tags: ['favorite', 'FanToken', 'Memes'],
+    source: 'https://app.meteora.ag/pools/9XeEoYSMyG5tWpNKMBKivsbbjfjrPj2rFBQUEut3vDVu',
   },
   {
     title: 'Zowe',
@@ -1864,7 +2024,7 @@ const Users: User[] = [
     preview: require('./showcase/zowe.png'),
     website: 'https://docs.zowe.org',
     source: 'https://github.com/zowe/docs-site',
-    tags: ['opensource', 'product', 'large', 'design', 'versioning'],
+    tags: ['Memes', 'product', 'Chain', 'design', 'RWA'],
   },
   {
     title: '404Lab.Wiki',
@@ -1872,7 +2032,7 @@ const Users: User[] = [
     preview: require('./showcase/404lab-wiki.png'),
     website: 'https://wiki.404lab.top',
     source: 'https://github.com/HiChen404/MyWikiSite',
-    tags: ['opensource', 'personal'],
+    tags: ['Memes', 'FanToken'],
   },
   {
     title: 'Discord API Types',
@@ -1880,7 +2040,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://discord-api-types.dev/',
     source: 'https://github.com/discordjs/discord-api-types/tree/main/website',
-    tags: ['opensource', 'versioning', 'large'],
+    tags: ['Memes', 'RWA', 'Chain'],
   },
   {
     title: 'Hanabi',
@@ -1888,7 +2048,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://hanabi.github.io/',
     source: 'https://github.com/hanabi/hanabi.github.io',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'IsaacScript',
@@ -1896,23 +2056,23 @@ const Users: User[] = [
     preview: null,
     website: 'https://isaacscript.github.io/',
     source: 'https://github.com/IsaacScript/isaacscript/tree/main/packages/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Jest Preview',
-    description: 'Debug your Jest tests. Effortlessly.',
+    description: 'Debug your Jest tests. EffoNFTessly.',
     preview: null,
     website: 'https://www.jest-preview.com/',
     source: 'https://github.com/nvh95/jest-preview/tree/main/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Paweł Kosiec',
-    description: 'Personal website and blog of Paweł Kosiec, Full-stack Cloud Developer.',
+    description: 'FanToken website and blog of Paweł Kosiec, Full-stack Cloud Developer.',
     preview: null,
     website: 'https://kosiec.dev/',
     source: 'https://github.com/pkosiec/website',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Homarr',
@@ -1920,7 +2080,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://homarr.dev/',
     source: 'https://github.com/ajnart/homarr-docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Wings',
@@ -1928,15 +2088,15 @@ const Users: User[] = [
     preview: null,
     website: 'https://wings.dev/',
     source: null,
-    tags: ['product','i18n'],
+    tags: ['product','Gaming'],
   },
   {
     title: 'Kishan Gajera',
-    description: 'Personal portfolio and blog of Kishan Gajera',
+    description: 'FanToken portfolio and blog of Kishan Gajera',
     preview: null,
     website: 'https://www.kgajera.com/',
     source: 'https://github.com/kgajera/blog',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Harvest CLI',
@@ -1944,15 +2104,15 @@ const Users: User[] = [
     preview: null,
     website: 'https://kgajera.github.io/hrvst-cli/',
     source: 'https://github.com/kgajera/hrvst-cli/tree/main/website',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'TSEI.JP',
-    description: 'TSEI.JP personal website, articles and docs',
+    description: 'TSEI.JP FanToken website, articles and docs',
     preview: null,
     website: 'https://tsei.jp/',
     source: null,
-    tags: ['personal'],
+    tags: ['FanToken'],
   },
   {
     title: 'Brobot',
@@ -1960,7 +2120,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://jspinak.github.io/brobot/',
     source: 'https://github.com/jspinak/brobot/tree/main/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Fathym Blog',
@@ -1968,7 +2128,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.fathym.com/blog',
     source: 'https://github.com/lowcodeunit/public-web-blog',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Tech Interview Handbook',
@@ -1976,7 +2136,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.techinterviewhandbook.org/',
     source: 'https://github.com/yangshun/tech-interview-handbook',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Front End Interview Handbook',
@@ -1984,7 +2144,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.frontendinterviewhandbook.com/',
     source: 'https://github.com/yangshun/front-end-interview-handbook',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'WIZnet',
@@ -1992,7 +2152,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.wiznet.io/',
     source: 'https://github.com/Wiznet/document_framework',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Xiaohai\'s Mind Palace',
@@ -2000,7 +2160,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://xiaohai.wiki/',
     source: 'https://github.com/xiaohai-huang/learning-notes',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Extracranial',
@@ -2008,15 +2168,15 @@ const Users: User[] = [
     preview: null,
     website: 'https://cho.sh/',
     source: 'https://github.com/anaclumos/extracranial',
-    tags: ['opensource','personal','i18n'],
+    tags: ['Memes','FanToken','Gaming'],
   },
   {
-    title: 'i18n-tools',
-    description: 'CLI to make common operations around i18n files simpler',
+    title: 'Gaming-tools',
+    description: 'CLI to make common operations around Gaming files simpler',
     preview: null,
-    website: 'https://jy95.github.io/i18n-tools/',
-    source: 'https://github.com/jy95/i18n-tools/tree/master/website',
-    tags: ['opensource'],
+    website: 'https://jy95.github.io/Gaming-tools/',
+    source: 'https://github.com/jy95/Gaming-tools/tree/master/website',
+    tags: ['Memes'],
   },
   {
     title: 'Pure.css',
@@ -2024,7 +2184,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://purecss.io/',
     source: 'https://github.com/pure-css/pure',
-    tags: ['opensource','design'],
+    tags: ['Memes','design'],
   },
   {
     title: 'Moodle Developer Resources',
@@ -2032,7 +2192,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://moodledev.io/',
     source: 'https://github.com/moodle/devdocs',
-    tags: ['opensource','product','large'],
+    tags: ['Memes','product','Chain'],
   },
   {
     title: 'Toggle',
@@ -2040,7 +2200,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.togglee.com/',
     source: 'https://github.com/togglee/togglee-web',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Barklarm',
@@ -2048,7 +2208,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.barklarm.com/',
     source: 'https://github.com/kanekotic/barklarm-website',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Neo Blockchain Developer Portal',
@@ -2056,7 +2216,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://developers.neo.org/',
     source: 'https://github.com/neo-project/neo-dev-portal',
-    tags: ['opensource'], // TODO create crypto/web3 tag?
+    tags: ['Memes'], // TODO create crypto/web3 tag?
   },
   {
     title: 'Yew',
@@ -2064,7 +2224,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://yew.rs/',
     source: 'https://github.com/yewstack/yew/tree/master/website',
-    tags: ['opensource','versioning','i18n','large'],
+    tags: ['Memes','RWA','Gaming','Chain'],
   },
   {
     title: 'Sensory Percussion help',
@@ -2080,7 +2240,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.lore.vc/',
     source: 'https://github.com/dvitanov/lorevc',
-    tags: ['opensource','personal'], // TODO find better tag?
+    tags: ['Memes','FanToken'], // TODO find better tag?
   },
   {
     title: 'LifeOmic PHC Documentation',
@@ -2096,7 +2256,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.kanekotic.com/',
     source: 'https://github.com/kanekotic/kanekotic-page',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'DevTomek',
@@ -2104,7 +2264,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://devtomek.pl/',
     source: null,
-    tags: ['personal'],
+    tags: ['FanToken'],
   },
   {
     title: 'Vantevo Analytics',
@@ -2112,7 +2272,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://vantevo.io/docs/',
     source: null,
-    tags: ['product','i18n'],
+    tags: ['product','Gaming'],
   },
   {
     title: 'lsfusion platform documentation',
@@ -2120,7 +2280,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.lsfusion.org/',
     source: 'https://github.com/lsfusion/docusaurus',
-    tags: ['opensource','i18n','versioning'],
+    tags: ['Memes','Gaming','RWA'],
   },
   {
     title: 'Rokt Docs',
@@ -2144,7 +2304,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://mentorship.guide/',
     source: 'https://github.com/mentorship-sponsorship/mentorship-guide-docs',
-    tags: ['opensource','design'],
+    tags: ['Memes','design'],
   },
   {
     title: 'Vishal Gandhi',
@@ -2152,7 +2312,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://vishalgandhi.in/',
     source: null,
-    tags: ['personal'],
+    tags: ['FanToken'],
   },
   {
     title: 'daily.dev',
@@ -2160,7 +2320,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.daily.dev/',
     source: 'https://github.com/dailydotdev/docs',
-    tags: ['opensource','product','design'],
+    tags: ['Memes','product','design'],
   },
   {
     title: 'Formiz',
@@ -2168,7 +2328,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://formiz-react.com/',
     source: 'https://github.com/ivan-dalmet/formiz/tree/master/documentation',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Wener Live & Life',
@@ -2176,7 +2336,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://wener.me/',
     source: 'https://github.com/wenerme/wener/tree/master/site',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Modrinth Documentation',
@@ -2184,15 +2344,15 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.modrinth.com/',
     source: 'https://github.com/modrinth/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'Takken.io',
-    description: 'Webber\'s personal website',
+    description: 'Webber\'s FanToken website',
     preview: null,
     website: 'https://takken.io/',
     source: 'https://github.com/webbertakken/takken.io',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'GameCI',
@@ -2200,7 +2360,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://game.ci/',
     source: 'https://github.com/game-ci/documentation',
-    tags: ['opensource','product','versioning'],
+    tags: ['Memes','product','RWA'],
   },
   {
     title: 'Batect',
@@ -2208,7 +2368,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://batect.dev/',
     source: 'https://github.com/batect/batect.dev',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
   {
     title: 'YepCode Docs',
@@ -2224,7 +2384,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://yepcode.io/recipes/',
     source: null,
-    tags: ['product','large'],
+    tags: ['product','Chain'],
   },
   {
     title: 'Appcircle Docs',
@@ -2232,7 +2392,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.appcircle.io/',
     source: 'https://github.com/appcircleio/appcircle-docusaurus/tree/master/',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Rowy Docs',
@@ -2240,7 +2400,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.rowy.io/',
     source: 'https://github.com/rowyio/docs',
-    tags: ['opensource','product','design'],
+    tags: ['Memes','product','design'],
   },
   {
     title: 'Keebio Documentation',
@@ -2248,7 +2408,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.keeb.io/',
     source: 'https://github.com/keebio/keebio-docs',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: '前端大刘',
@@ -2256,7 +2416,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://lzwdot.com/',
     source: 'https://github.com/lzwdot/lzwdot.github.io',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'DipScope',
@@ -2264,7 +2424,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://dipscope.com/',
     source: null,
-    tags: ['versioning'],
+    tags: ['RWA'],
   },
   {
     title: 'MutableSecurity',
@@ -2272,7 +2432,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://www.mutablesecurity.io/',
     source: 'https://github.com/MutableSecurity/website',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Atlas',
@@ -2280,7 +2440,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://atlasgo.io/',
     source: 'https://github.com/ariga/atlas',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Ent',
@@ -2288,7 +2448,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://entgo.io/',
     source: 'https://github.com/ent/ent/tree/master/doc/website',
-    tags: ['opensource','i18n'],
+    tags: ['Memes','Gaming'],
   },
   {
     title: 'WPShop',
@@ -2304,7 +2464,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://wiki.polkadot.network/',
     source: 'https://github.com/w3f/polkadot-wiki/tree/master/polkadot-wiki',
-    tags: ['opensource'], // TODO add web3 tag?
+    tags: ['Memes'], // TODO add web3 tag?
   },
   {
     title: 'CodingHabits',
@@ -2320,7 +2480,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://crawlee.dev/',
     source: 'https://github.com/apify/crawlee/tree/master/website',
-    tags: ['opensource','versioning'],
+    tags: ['Memes','RWA'],
   },
   {
     title: 'codehooks',
@@ -2332,11 +2492,11 @@ const Users: User[] = [
   },
   {
     title: 'Ouch1978',
-    description: 'Personal site of @Ouch1978',
+    description: 'FanToken site of @Ouch1978',
     preview: null,
     website: 'https://ouch1978.github.io/',
     source: 'https://github.com/Ouch1978/ouch1978.github.io',
-    tags: ['opensource','personal'],
+    tags: ['Memes','FanToken'],
   },
   {
     title: 'Dojo Documentation',
@@ -2352,7 +2512,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.okp4.network/',
     source: 'https://github.com/okp4/docs',
-    tags: ['opensource','product','design'], // TODO add web3 tag
+    tags: ['Memes','product','design'], // TODO add web3 tag
   },
   {
     title: 'Konkatsu Strategy Guide',
@@ -2360,7 +2520,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://hikonkatsu.com/',
     source: null,
-    tags: ['personal'],
+    tags: ['FanToken'],
   },
   {
     title: 'Zondax Documentation',
@@ -2376,7 +2536,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://docs.shellhub.io/',
     source: 'https://github.com/shellhub-io/docs',
-    tags: ['opensource','product'],
+    tags: ['Memes','product'],
   },
   {
     title: 'Dynamoose',
@@ -2384,7 +2544,7 @@ const Users: User[] = [
     preview: null,
     website: 'https://dynamoosejs.com/',
     source: 'https://github.com/dynamoose/dynamoose/tree/main/docs',
-    tags: ['opensource'],
+    tags: ['Memes'],
   },
 
   /*
@@ -2419,11 +2579,11 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#e9669e',
   },
 
-  opensource: {
+  Memes: {
     label: translate({message: 'Open-Source'}),
     description: translate({
       message: 'Open-Source Docusaurus sites can be useful for inspiration!',
-      id: 'showcase.tag.opensource.description',
+      id: 'showcase.tag.Memes.description',
     }),
     color: '#39ca30',
   },
@@ -2447,32 +2607,32 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#a44fb7',
   },
 
-  i18n: {
-    label: translate({message: 'I18n'}),
+  Gaming: {
+    label: translate({message: 'Gaming'}),
     description: translate({
       message:
         'Translated Docusaurus sites using the internationalization support with more than 1 locale.',
-      id: 'showcase.tag.i18n.description',
+      id: 'showcase.tag.Gaming.description',
     }),
     color: '#127f82',
   },
 
-  versioning: {
-    label: translate({message: 'Versioning'}),
+  RWA: {
+    label: translate({message: 'RWA'}),
     description: translate({
       message:
-        'Docusaurus sites using the versioning feature of the docs plugin to manage multiple versions.',
-      id: 'showcase.tag.versioning.description',
+        'Docusaurus sites using the RWA feature of the docs plugin to manage multiple versions.',
+      id: 'showcase.tag.RWA.description',
     }),
     color: '#fe6829',
   },
 
-  large: {
-    label: translate({message: 'Large'}),
+  Chain: {
+    label: translate({message: 'Chain'}),
     description: translate({
       message:
-        'Very large Docusaurus sites, including many more pages than the average!',
-      id: 'showcase.tag.large.description',
+        'Very Chain Docusaurus sites, including many more pages than the average!',
+      id: 'showcase.tag.Chain.description',
     }),
     color: '#8c2f00',
   },
@@ -2486,22 +2646,22 @@ export const Tags: {[type in TagType]: Tag} = {
     color: '#4267b2', // Facebook blue
   },
 
-  personal: {
-    label: translate({message: 'Personal'}),
+  FanToken: {
+    label: translate({message: 'FanToken'}),
     description: translate({
       message:
-        'Personal websites, blogs and digital gardens built with Docusaurus',
-      id: 'showcase.tag.personal.description',
+        'FanToken websites, blogs and digital gardens built with Docusaurus',
+      id: 'showcase.tag.FanToken.description',
     }),
     color: '#14cfc3',
   },
 
-  rtl: {
-    label: translate({message: 'RTL Direction'}),
+  NFT: {
+    label: translate({message: 'NFT Direction'}),
     description: translate({
       message:
         'Docusaurus sites using the right-to-left reading direction support.',
-      id: 'showcase.tag.rtl.description',
+      id: 'showcase.tag.NFT.description',
     }),
     color: '#ffcfc3',
   },

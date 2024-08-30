@@ -15,11 +15,11 @@ import ShowcaseSearchBar from '@site/src/pages/showcase/_components/ShowcaseSear
 import ShowcaseCards from './_components/ShowcaseCards';
 import ShowcaseFilters from './_components/ShowcaseFilters';
 
-const TITLE = translate({message: 'Docusaurus Site Showcase'});
+const TITLE = translate({message: 'SOLANA TOKEN SHOWCASE'});
 const DESCRIPTION = translate({
-  message: 'List of websites people are building with Docusaurus',
+  message: 'List of token people are building with solana',
 });
-const SUBMIT_URL = 'https://github.com/facebook/docusaurus/discussions/7826';
+const SUBMIT_URL = 'https://github.com/543x/Solana-tokens/discussions/1';
 
 function ShowcaseHeader() {
   return (
@@ -28,7 +28,7 @@ function ShowcaseHeader() {
       <p>{DESCRIPTION}</p>
       <Link className="button button--primary" to={SUBMIT_URL}>
         <Translate id="showcase.header.button">
-          🙏 Please add your site
+          🙏 Please add your token
         </Translate>
       </Link>
     </section>

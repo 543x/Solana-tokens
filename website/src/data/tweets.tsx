@@ -17,140 +17,120 @@ export type TweetItem = Tweet & {
 
 const TWEETS: TweetItem[] = [
   {
-    url: 'https://twitter.com/acemarke/status/1452725153998245891',
+    url: 'https://h.543x.com/',
     handle: 'acemarke',
-    name: 'Mark Erikson',
-    date: 'Oct 26, 2021',
+    name: 'GoogleCloud🥳',
+    date: 'Visit website',
     content: (
       <>
-        We&apos;ve been using Docusaurus for all the Redux org docs sites for
-        the last couple years, and it&apos;s great! We&apos;ve been able to
-        focus on content, customize some presentation and features, and It Just
-        Works.
+        🎉High-performance infrastructure for cloud computing, data analytics & machine learning👏
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'markerikson',
   },
   {
-    url: 'https://twitter.com/arcanis/status/1351620354561732608',
+    url: 'https://ai.543x.com/',
     handle: 'arcanis',
-    name: 'Maël',
-    date: 'Jan 20, 2021',
+    name: 'Create AI📚',
+    date: 'Visit website',
     content: (
       <>
-        I&apos;ve used Docusaurus for two websites this year, and I&apos;ve been
-        very happy about the v2. Looks good, and simple to setup.
+        👏AI revolutionizes industries, enhances productivity, solves problems, personalizes experiences, and permeates daily life from smart homes to autonomous vehicles
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'arcanis',
   },
   {
-    url: 'https://twitter.com/maxlynch/status/1375113166007455748',
+    url: 'https://s.543x.com/',
     handle: 'maxlynch',
-    name: 'Max Lynch',
-    date: 'Mar 25, 2021',
+    name: 'Swap 📝',
+    date: 'Visit website',
     content: (
       <>
-        Docusaurus v2 doubles as a really nice little static site generator tool
-        for content-focused sites, love it 👏
+        🔥The Monetary Future: At the intersection of free banking, cryptography, and digital currency 👏
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'mlynch',
   },
   {
-    url: 'https://twitter.com/supabase/status/1328960757149671425',
+    url: 'https://www.543x.com',
     handle: 'supabase',
-    name: 'Supabase',
-    date: 'Nov 18, 2020',
+    name: 'Bitcoin🐱',
+    date: 'Visit website',
     content: (
       <>
-        We&apos;ve been using V2 since January and it has been great - we spend
-        less time building documentation and more time building 🛳
-        <br />
-        <br />
-        Thanks <b>@docusaurus</b> team 🦖
+        🔥Bitcoin: A Peer-to-Peer Electronic Cash System 🦖Bitcoin is the first decentralized cryptocurrency. Nodes in the peer-to-peer bitcoin network verify transactions through cryptography and record them in a public distributed ledger, called a blockchain, without central oversight.
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'supabase',
   },
   {
-    url: 'https://twitter.com/paularmstrong/status/1387059593373700100',
+    url: 'https://www.z2.pw',
     handle: 'paularmstrong',
-    name: 'Paul Armstrong',
-    date: 'Apr 27, 2021',
+    name: 'blockchain🧠',
+    date: 'Visit website',
     content: (
       <>
-        Continue to be impressed and excited about Docusaurus v2 alpha releases.
-        Already using the sidebar items generator to help monorepo workspace
-        devs create their own doc pages without any configuration needed.
+         👏Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'paularmstrong',
   },
   {
-    url: 'https://twitter.com/sanketsahu/status/1328677366642528257',
+    url: 'https://r.543x.com',
     handle: 'sanketsahu',
-    name: 'Sanket Sahu',
-    date: 'Nov 17, 2020',
+    name: 'React App👏',
+    date: 'Visit website',
     content: (
       <>
-        .<b>@docusaurus</b> ❤️
+        You don't need to learn and configure many build tools. Instant reloads help you focus on development. When it's time to deploy, your bundles are optimized automatically.❤️
       </>
     ),
-    showOnHomepage: false,
+    showOnHomepage: true,
     githubUsername: 'sanketsahu',
   },
   {
-    url: 'https://twitter.com/debs_obrien/status/1374615572298801155',
+    url: 'https://e.543x.com/',
     handle: 'debs_obrien',
-    name: "Debbie O'Brien",
-    date: 'Mar 24, 2021',
+    name: "Create React App",
+    date: 'Visit website',
     content: (
       <>
-        Been doing a lot of work with <b>@docusaurus</b> lately and I have to
-        say it is really fun to work with. A lot of really cool features. I love
-        that you can easily reuse content by creating a markdown file and
-        importing it as a component. 🔥
+        Your app only needs one build dependency. We test Create React App to make sure that all of its underlying pieces work together.🔥
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'debs-obrien',
   },
   {
-    url: 'https://twitter.com/Dr_Electron/status/1443635328376508433',
+    url: 'https://d.543x.com/',
     handle: 'Dr_Electron',
-    name: 'Dr.Electron',
-    date: 'Oct 11, 2021',
+    name: 'Firebase💼',
+    date: 'Visit website',
     content: (
       <>
-        The #IOTA wiki is now part of the <b>@docusaurus</b> showcase. We even
-        have the honor of being a favorite. We are really happy that we found
-        this project. It helped us a lot to improve the documentation. And we
-        still have a lot of plans with things like tutorials, versioning and
-        i8n.
+        ☀️Google tools help build applications, improve quality and efficiency, and promote business growth
       </>
     ),
     showOnHomepage: true,
     githubUsername: 'Dr-Electron',
   },
   {
-    url: 'https://twitter.com/kentcdodds/status/1323806816019468288',
+    url: 'https://a.z2.pw',
     handle: 'kentcdodds',
-    name: 'Kent C. Dodds',
-    date: 'Nov 4, 2020',
+    name: '📊GoogleSheet',
+    date: 'Visit website',
     content: (
       <>
-        http://testing-library.com just got a nice update! We&apos;re now on the
-        latest version of <b>@docusaurus</b> thanks to @matanbobi, @TensorNo,
-        and @nickemccurdy 💙
+        Create, edit, and collaborate on spreadsheets with the Google Sheets app. With Sheets you can 💙
         <br />
         <br />
-        My favorite new feature: dark mode!! 🌑/☀️
+        Online, collaborative spreadsheets 🌑/☀️
       </>
     ),
     showOnHomepage: true,
@@ -160,7 +140,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/bantg/status/1463608561368457225',
     handle: 'bantg',
     name: 'banteg',
-    date: 'Nov 25, 2021',
+    date: 'Visit website',
     content: <>I like docusaurus much more, it&apos;s so snappy.</>,
     showOnHomepage: false,
     githubUsername: 'banteg',
@@ -169,7 +149,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/swyx/status/1418405515684581378',
     handle: 'swyx',
     name: 'swyx',
-    date: 'Jul 23, 2021',
+    date: 'Visit website',
     content: (
       <>
         Happy to share Temporal&apos;s first open source sponsorship — of{' '}
@@ -181,14 +161,14 @@ const TWEETS: TweetItem[] = [
         project, support it if you can!
       </>
     ),
-    showOnHomepage: true,
+    showOnHomepage: false,
     githubUsername: 'sw-yx',
   },
   {
     url: 'https://twitter.com/rachelnabors/status/1478490902037467137',
     handle: 'rachelnabors',
     name: "R 'Nearest' Nabors 💙",
-    date: 'Jan 5, 2022',
+    date: 'Visit website',
     content: (
       <>
         I hear <b>@docusaurus</b> is a good tool for that!
@@ -201,7 +181,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/dabit3/status/1394685348375052295',
     handle: 'dabit3',
     name: 'Nader Dabit',
-    date: 'May 19, 2021',
+    date: 'Visit website',
     content: (
       <>
         I did try Docusaurus, and I really liked it! Still investigating various
@@ -215,7 +195,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/johnny_reilly/status/1469238609266028545',
     handle: 'johnny_reilly',
     name: 'John Reilly',
-    date: 'Dec 10, 2021',
+    date: 'Visit website',
     content: (
       <>
         I ❤️ <b>@docusaurus</b> - it makes it so easy to spin up docs, blogs and
@@ -233,7 +213,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/tinkertim/status/1423358665726304260',
     handle: 'tinkertim',
     name: 'Tim Post 💉💉💉',
-    date: 'Aug 6, 2021',
+    date: 'Visit website',
     content: (
       <>
         Docusaurus is mind-bendingly flexible. <br />
@@ -251,7 +231,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/sebastienlorber/status/1321784071815680000',
     handle: 'sebastienlorber',
     name: 'Sebastien Lorber',
-    date: 'Oct 29, 2020',
+    date: 'Visit website',
     content: (
       <>
         🥳🎊🥳🎊🥳🎊🥳🎊 The @reactnative website just migrated to{' '}
@@ -274,7 +254,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/iansu/status/1184149586048245760',
     handle: 'iansu',
     name: 'Ian Sutherland',
-    date: 'Oct 16, 2019',
+    date: 'Visit website',
     content: (
       <>
         We just updated the Create React App docs to Docusaurus v2. Now with
@@ -294,7 +274,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/mweststrate/status/1181276252293853186',
     handle: 'mweststrate',
     name: 'Michel Weststrate',
-    date: 'Oct 8, 2019',
+    date: 'Visit website',
     content: (
       <>
         New #mobx docs are online! More modern, fixing many UI issues.
@@ -314,7 +294,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/verdaccio_npm/status/1420187249145118722',
     handle: 'verdaccio_npm',
     name: 'verdaccio',
-    date: 'Jul 28, 2021',
+    date: 'Visit website',
     content: (
       <>
         The new website has landed 🚀 powered by <b>@docusaurus</b> v2 and made
@@ -331,7 +311,7 @@ const TWEETS: TweetItem[] = [
     url: 'https://twitter.com/yangshunz/status/1284536949718478848',
     handle: 'yangshunz',
     name: 'Yangshun Tay',
-    date: 'Jul 19, 2020',
+    date: 'Visit website',
     content: (
       <>
         I made a <b>@docusaurus</b> website for answers to the H5BP Front End

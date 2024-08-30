@@ -74,7 +74,7 @@ function HeadingText() {
   return (
     <div className={styles.headingText}>
       <Heading as="h2">
-        <Translate id="showcase.filters.title">Filters</Translate>
+        <Translate id="showcase.filters.title">Tokens</Translate>
       </Heading>
       <span>{siteCountPlural(filteredUsers.length)}</span>
     </div>

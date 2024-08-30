@@ -29,8 +29,8 @@ export default {
     },
     {
       type: 'link',
-      label: 'Chat with us on Discord',
-      href: 'https://discord.gg/docusaurus',
+      label: 'Chat with us',
+      href: 'https://www.543x.com',
     },
   ],
 };

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) 543x, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -50,7 +50,7 @@ function isPrerelease(version: string) {
 function getLastStableVersion() {
   const lastStableVersion = versions.find((version) => !isPrerelease(version));
   if (!lastStableVersion) {
-    throw new Error('unexpected, no stable Docusaurus version?');
+    throw new Error('unexpected, no stable SOLANA version?');
   }
   return lastStableVersion;
 }
@@ -101,7 +101,7 @@ const crashTest = process.env.DOCUSAURUS_CRASH_TEST === 'true';
 // hyperfine --prepare 'yarn clear:website' --runs 3 'DOCUSAURUS_SLOWER=true yarn build:website:fast' 'yarn build:website:fast'
 const isSlower = process.env.DOCUSAURUS_SLOWER === 'true';
 if (isSlower) {
-  console.log('🐢 Using slower Docusaurus build');
+  console.log('🐢 Using slower SOLANA build');
 }
 
 const router = process.env
@@ -152,20 +152,14 @@ function getLocalizedConfigValue(key: keyof typeof ConfigLocalized) {
 
 export default async function createConfigAsync() {
   return {
-    title: 'Docusaurus',
+    title: 'SOLANA',
     tagline: getLocalizedConfigValue('tagline'),
-    organizationName: 'facebook',
-    projectName: 'docusaurus',
+    organizationName: '543x',
+    projectName: 'SOLANA',
     baseUrl,
     baseUrlIssueBanner: true,
-    url: 'https://docusaurus.io',
-    future: {
-      experimental_faster: !isSlower,
-      experimental_storage: {
-        namespace: true,
-      },
-      experimental_router: router,
-    },
+    url: 'https://i.543x.com',
+
     // Dogfood both settings:
     // - force trailing slashes for deploy previews
     // - avoid trailing slashes in prod
@@ -209,7 +203,7 @@ export default async function createConfigAsync() {
         let result = fileContent;
 
         // This fixes Crowdin bug altering MDX comments on i18n sites...
-        // https://github.com/facebook/docusaurus/pull/9220
+        // https://github.com/543x/docusaurus/pull/9220
         result = result.replaceAll('{/_', '{/*');
         result = result.replaceAll('_/}', '*/}');
 
@@ -246,7 +240,7 @@ export default async function createConfigAsync() {
       crashTest,
       isDeployPreview,
       description:
-        'An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.',
+        'An optimized site generator in React. SOLANA helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.',
       announcedVersion,
     },
     staticDirectories: [
@@ -262,7 +256,7 @@ export default async function createConfigAsync() {
       [
         './src/plugins/changelog/index.js',
         {
-          blogTitle: 'Docusaurus changelog',
+          blogTitle: 'SOLANA changelog',
           blogDescription:
             'Keep yourself up-to-date about new features in every release',
           blogSidebarCount: 'ALL',
@@ -274,10 +268,10 @@ export default async function createConfigAsync() {
           authorsMapPath: 'authors.json',
           feedOptions: {
             type: 'all',
-            title: 'Docusaurus changelog',
+            title: 'SOLANA changelog',
             description:
               'Keep yourself up-to-date about new features in every release',
-            copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+            copyright: `Copyright © ${new Date().getFullYear()} 543x, Inc.`,
             language: defaultLocale,
           },
           onInlineAuthors: 'warn',
@@ -293,7 +287,7 @@ export default async function createConfigAsync() {
             if (locale !== defaultLocale) {
               return `https://crowdin.com/project/docusaurus-v2/${locale}`;
             }
-            return `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`;
+            return `https://github.com/543x/Solana-tokens/edit/main/website/${versionDocsDirPath}/${docPath}`;
           },
           remarkPlugins: [npm2yarn],
           editCurrentVersion: true,
@@ -357,7 +351,7 @@ export default async function createConfigAsync() {
             {
               tagName: 'link',
               rel: 'icon',
-              href: 'img/docusaurus.png',
+              href: 'img/docusaurus.svg',
             },
             {
               tagName: 'link',
@@ -382,18 +376,18 @@ export default async function createConfigAsync() {
             {
               tagName: 'link',
               rel: 'apple-touch-icon',
-              href: 'img/docusaurus.png',
+              href: 'img/docusaurus.svg',
             },
             {
               tagName: 'link',
               rel: 'mask-icon',
-              href: 'img/docusaurus.png',
+              href: 'img/docusaurus.svg',
               color: 'rgb(62, 204, 94)',
             },
             {
               tagName: 'meta',
               name: 'msapplication-TileImage',
-              content: 'img/docusaurus.png',
+              content: 'img/docusaurus.svg',
             },
             {
               tagName: 'meta',
@@ -425,7 +419,7 @@ export default async function createConfigAsync() {
               // We want users to submit updates to the upstream/next version!
               // Otherwise we risk losing the update on the next release.
               const nextVersionDocsDirPath = 'docs';
-              return `https://github.com/facebook/docusaurus/edit/main/website/${nextVersionDocsDirPath}/${docPath}`;
+              return `https://github.com/543x/Solana-tokens/edit/main/website/${nextVersionDocsDirPath}/${docPath}`;
             },
             admonitions: {
               keywords: ['my-custom-admonition'],
@@ -470,19 +464,19 @@ export default async function createConfigAsync() {
               if (locale !== defaultLocale) {
                 return `https://crowdin.com/project/docusaurus-v2/${locale}`;
               }
-              return `https://github.com/facebook/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`;
+              return `https://github.com/543x/Solana-tokens/edit/main/website/${blogDirPath}/${blogPath}`;
             },
             remarkPlugins: [npm2yarn],
             postsPerPage: 5,
             feedOptions: {
               type: 'all',
               description:
-                'Keep up to date with upcoming Docusaurus releases and articles by following our feed!',
-              copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+                'Keep up to date with upcoming Solana-tokens releases and articles by following our feed!',
+              copyright: `Copyright © ${new Date().getFullYear()} 543x, Inc.`,
               xslt: true,
             },
-            blogTitle: 'Docusaurus blog',
-            blogDescription: 'Read blog posts about Docusaurus from the team',
+            blogTitle: 'Solana blog',
+            blogDescription: 'Read blog posts about Solana from the team',
             blogSidebarCount: 'ALL',
             blogSidebarTitle: 'All our posts',
             onUntruncatedBlogPosts:
@@ -500,7 +494,7 @@ export default async function createConfigAsync() {
               if (locale !== defaultLocale) {
                 return `https://crowdin.com/project/docusaurus-v2/${locale}`;
               }
-              return `https://github.com/facebook/docusaurus/edit/main/website/src/pages/${pagesPath}`;
+              return `https://github.com/543x/Solana-tokens/edit/main/website/src/pages/${pagesPath}`;
             },
             showLastUpdateAuthor: true,
             showLastUpdateTime: true,
@@ -545,8 +539,8 @@ export default async function createConfigAsync() {
       },
       announcementBar: {
         id: `announcementBar-v${announcedVersion}`,
-        // content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
-        content: `🎉️ <b><a target="_blank" href="https://docusaurus.io/blog/releases/${announcedVersion}">Docusaurus v${announcedVersion}</a> is out!</b> 🥳️`,
+        // content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/543x/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
+        content: `🎉️ <b><a target="_blank" href="https://www.543x.com">www.543x.com v${announcedVersion}</a> is out!</b> 🥳️`,
       },
       prism: {
         additionalLanguages: [
@@ -591,7 +585,7 @@ export default async function createConfigAsync() {
       },
       navbar: {
         hideOnScroll: true,
-        title: 'Docusaurus',
+        title: 'SOLANA',
         logo: {
           alt: '',
           src: 'img/docusaurus.svg',
@@ -606,12 +600,6 @@ export default async function createConfigAsync() {
             docId: 'introduction',
             label: 'Docs',
           },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'api',
-            label: 'API',
-          },
           {to: 'blog', label: 'Blog', position: 'left'},
           {to: 'showcase', label: 'Showcase', position: 'left'},
           {
@@ -621,12 +609,6 @@ export default async function createConfigAsync() {
             activeBaseRegex: `/community/`,
           },
           // This item links to a draft doc: only displayed in dev
-          {
-            type: 'doc',
-            docId: 'index',
-            label: 'Tests',
-            docsPluginId: 'docs-tests',
-          },
           isDev && {to: '/__docusaurus/debug', label: 'Debug'},
           // Custom item for dogfooding: only displayed in /tests/ routes
           {
@@ -655,7 +637,7 @@ export default async function createConfigAsync() {
                 }),
               ),
               {
-                href: 'https://v1.docusaurus.io',
+                href: 'https://543x.com',
                 label: '1.x.x',
               },
               {
@@ -677,13 +659,13 @@ export default async function createConfigAsync() {
                 value: '<hr style="margin: 0.3rem 0;">',
               },
               {
-                href: 'https://github.com/facebook/docusaurus/issues/3526',
+                href: 'https://github.com/543x/Solana-tokens/issues/2',
                 label: 'Help Us Translate',
               },
             ],
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/543x/Solana-tokens',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -698,19 +680,23 @@ export default async function createConfigAsync() {
         style: 'dark',
         links: [
           {
-            title: 'Learn',
+            title: 'Docs',
             items: [
               {
-                label: 'Introduction',
-                to: 'docs',
+                label: 'Get Started',
+                href: 'https://ai.543x.com',
               },
               {
-                label: 'Installation',
-                to: 'docs/installation',
+                label: 'Learn React',
+                href: 'https://r.543x.com',
               },
               {
-                label: 'Migration from v1 to v2',
-                to: 'docs/migration',
+                label: 'Quick Start',
+                href: 'https://e.543x.com',
+              },
+              {
+                label: 'Logo by',
+                href: 'https://www.z2.pw',
               },
             ],
           },
@@ -718,20 +704,41 @@ export default async function createConfigAsync() {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'you',
+                href: 'https://c.543x.com',
               },
               {
-                label: 'Feature Requests',
-                to: '/feature-requests',
+                label: 'GitHub Discussions',
+                href: 'https://y.543x.com',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Pump',
+                href: 'https://d.543x.com',
               },
               {
-                label: 'Help',
-                to: '/community/support',
+                label: 'Swap',
+                href: 'https://s.543x.com',
+              },
+            ],
+          },
+          {
+            title: 'Social',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://b.543x.com',
+              },
+              {
+                label: 'Conduct',
+                href: 'https://btc.543x.com',
+              },
+              {
+                label: 'the Team',
+                href: 'https://g.543x.com',
+              },
+              {
+                label: 'Contributors',
+                href: 'https://f.543x.com',
               },
             ],
           },
@@ -740,52 +747,19 @@ export default async function createConfigAsync() {
             items: [
               {
                 label: 'Blog',
-                to: 'blog',
+                href: 'https://d.543x.com',
               },
               {
-                label: 'Changelog',
-                to: '/changelog',
+                label: 'React Native',
+                href: 'https://doge.543x.com',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'PEPE',
+                href: 'https://pepe.543x.com',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-              {
-                html: `
-                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
-                </a>
-              `,
-              },
-              {
-                html: `
-                <a href="https://argos-ci.com" target="_blank" rel="noreferrer noopener" aria-label="Covered by Argos">
-                  <img src="https://argos-ci.com/badge.svg" alt="Covered by Argos" width="133" height="20" />
-                </a>
-              `,
-              },
-            ],
-          },
-          {
-            title: 'Legal',
-            // Please don't remove the privacy and terms, it's a legal
-            // requirement.
-            items: [
               {
                 label: 'Privacy',
-                href: 'https://opensource.facebook.com/legal/privacy/',
-              },
-              {
-                label: 'Terms',
-                href: 'https://opensource.facebook.com/legal/terms/',
-              },
-              {
-                label: 'Cookie Policy',
-                href: 'https://opensource.facebook.com/legal/cookie-policy/',
+                href: 'https://no.543x.com',
               },
             ],
           },
@@ -793,9 +767,9 @@ export default async function createConfigAsync() {
         logo: {
           alt: 'Meta Open Source Logo',
           src: '/img/meta_opensource_logo_negative.svg',
-          href: 'https://opensource.fb.com',
+          href: 'https://www.543x.com',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} SOLANA Platforms, Inc.`,
       },
     } satisfies Preset.ThemeConfig,
   } satisfies Config;
