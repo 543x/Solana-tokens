@@ -1,0 +1,13 @@
+author: unboxed
+title: Solana Mobile Development
+description:
+  Use Solana features from native mobile apps for both Android and iOS.
+lessons:
+  - intro-to-solana-mobile
+  - mwa-deep-dive
+  - solana-mobile-dapps-with-expo
+priority: 99
+# Uses deprecated @metaplex-foundation/js library for NFTs
+# which also uses old RPC methods and no longer functions.
+# TODO: Superteam to update
+isHidden: true

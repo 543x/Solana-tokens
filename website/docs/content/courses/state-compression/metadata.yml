@@ -1,0 +1,12 @@
+author: unboxed
+title: State Compression
+description:
+  "Use state compression for large NFT collections and other large-data cases."
+lessons:
+  - compressed-nfts
+  - generalized-state-compression
+priority: 65
+# Uses deprecated @metaplex-foundation/js library for NFTs
+# which also uses old RPC methods and no longer functions.
+# TODO: Superteam to update
+isHidden: true
