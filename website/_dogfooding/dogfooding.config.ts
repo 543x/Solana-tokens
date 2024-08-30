@@ -146,14 +146,14 @@ export const dogfoodingRedirects: {from: string[]; to: string}[] = [
   },
   {
     from: ['/home/absolute'],
-    to: 'https://i.543x.com/',
+    to: 'https://docusaurus.io/',
   },
   {
     from: ['/home/absolute/qs'],
-    to: 'https://i.543x.com/?a=1',
+    to: 'https://docusaurus.io/?a=1',
   },
   {
     from: ['/home/absolute/anchor'],
-    to: 'https://i.543x.com/#anchor',
+    to: 'https://docusaurus.io/#anchor',
   },
 ];
