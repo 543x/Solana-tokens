@@ -57,7 +57,7 @@ function VersionNotice() {
               id="upgradeGuide.archivedVersion.notice"
               values={{
                 mainSiteLink: (
-                  <Link href="https://docusaurus.io/docs/installation">
+                  <Link href="https://i.543x.com/docs/installation">
                     <Translate id="upgradeGuide.archivedVersion.notice.mainSiteLink.label">
                       main site
                     </Translate>

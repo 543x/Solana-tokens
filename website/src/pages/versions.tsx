@@ -182,7 +182,7 @@ export default function Version(): JSX.Element {
               <tr>
                 <th>1.x</th>
                 <td>
-                  <Link href="https://v1.docusaurus.io/docs/en/installation">
+                  <Link href="https://v1.i.543x.com/docs/en/installation">
                     <DocumentationLabel />
                   </Link>
                 </td>

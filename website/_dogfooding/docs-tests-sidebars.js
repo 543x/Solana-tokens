@@ -36,7 +36,7 @@ const sidebars = {
         {
           type: 'link',
           label: 'External Link test',
-          href: 'https://docusaurus.io',
+          href: 'https://i.543x.com',
         },
         {
           type: 'category',
@@ -49,12 +49,12 @@ const sidebars = {
             {
               type: 'link',
               label: 'Link without description',
-              href: 'https://docusaurus.io',
+              href: 'https://i.543x.com',
             },
             {
               type: 'link',
               label: 'Link with description',
-              href: 'https://docusaurus.io',
+              href: 'https://i.543x.com',
               description: 'Some link description',
             },
             {
@@ -64,7 +64,7 @@ const sidebars = {
                 {
                   type: 'link',
                   label: 'Link ',
-                  href: 'https://docusaurus.io',
+                  href: 'https://i.543x.com',
                 },
               ],
             },
@@ -76,7 +76,7 @@ const sidebars = {
                 {
                   type: 'link',
                   label: 'Link ',
-                  href: 'https://docusaurus.io',
+                  href: 'https://i.543x.com',
                 },
               ],
             },

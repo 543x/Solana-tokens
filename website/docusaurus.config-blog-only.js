@@ -12,7 +12,7 @@ export default {
   organizationName: 'facebook',
   projectName: 'docusaurus',
   baseUrl: '/blog-only/',
-  url: 'https://docusaurus.io',
+  url: 'https://i.543x.com',
   // We can only warn now, since we have blog pages linking to non-blog pages...
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',

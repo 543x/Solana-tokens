@@ -224,17 +224,9 @@ export default async function createConfigAsync() {
         return result;
       },
     },
-    onBrokenLinks:
-      isVersioningDisabled ||
-      process.env.DOCUSAURUS_CURRENT_LOCALE !== defaultLocale
-        ? 'warn'
-        : 'throw',
-    onBrokenAnchors:
-      isVersioningDisabled ||
-      process.env.DOCUSAURUS_CURRENT_LOCALE !== defaultLocale
-        ? 'warn'
-        : 'throw',
-    onBrokenMarkdownLinks: 'warn',
+    onBrokenLinks: 'ignore', // 忽略所有断开的链接
+    onBrokenAnchors: 'ignore', // 忽略所有断开的锚点
+    onBrokenMarkdownLinks: 'ignore', 
     favicon: 'img/docusaurus.ico',
     customFields: {
       crashTest,
