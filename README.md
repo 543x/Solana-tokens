@@ -9,6 +9,61 @@
   </h1>
 </div>
 
+IMPORTANT: You can submit your token to our showcase by posting in this discussion. However, we cannot guarantee that your token will be added, nor how quickly it will be added. Please be patient.
+
+Add your token to the solana showcase
+🧑‍🎨You built a beautiful solana token and want to show it to the world?
+
+🙏 Add it to our website showcase — it only takes seconds! ⏱
+
+✒️The only thing you have to do is ➡️ give us your approval!
+
+⚠️ Submit your website only.
+
+Submit your token
+Just post a comment in this GitHub discussion with some basic information:
+
+Token title: <= 60 characters
+Token description: ≤120 characters
+Token URL: Live production deployment URL of your website
+Token CA: Token address
+Tags: See the list of available tags below
+You can also just give us the website URL and we’ll figure out the rest, but providing additional information is still appreciated and ensures the correct information is displayed 😄.
+
+We will take screenshots of the tokens ourselves.
+
+This data will be used to render the site showcase card:
+
+Site showcase card example
+
+After submission
+We will add your token as soon as possible.
+
+Please wait - we will reply later to avoid creating too many notifications for everyone. If the notifications bother you, you can still unsubscribe - we will ping you when you reply.
+
+We will add valid submissions to our site showcase in one go when we have time.
+
+We will notify you if your submission is invalid.
+
+Site Tags
+List of available site tags:
+
+Meme
+Airdrop
+FanToken
+Tokenization
+RWA
+NFT
+
+Note
+Help us keep the showcase up to date: tell us when a token has bad data.
+
+You can also request updates to the token showcase data!
+
+Technically, you can open a PR yourself and edit website/src/data/users.tsx. However, except for very minor edits, we prefer to handle PRs ourselves for various reasons (signing Facebook CLA, too many PRs, time-consuming reviews, resizing images, fixing site tags and linter issues...)
+We reserve the right to edit your submission before publishing
+We will always keep this discussion clean: submissions will be marked as resolved and then deleted
+
 <p align="center">
   <a href="https://twitter.com/docusaurus"><img src="https://img.shields.io/twitter/follow/docusaurus.svg?style=social" align="right" alt="Twitter Follow" /></a>
   <a href="#backers" alt="sponsors on Open Collective"><img src="https://opencollective.com/Docusaurus/backers/badge.svg" /></a>
