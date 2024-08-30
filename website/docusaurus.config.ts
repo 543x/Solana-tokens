@@ -135,25 +135,11 @@ const TwitterSvg =
 
 const defaultLocale = 'en';
 
-function getLocalizedConfigValue(key: keyof typeof ConfigLocalized) {
-  const currentLocale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? defaultLocale;
-  const values = ConfigLocalized[key];
-  if (!values) {
-    throw new Error(`Localized config key=${key} not found`);
-  }
-  const value = values[currentLocale] ?? values[defaultLocale];
-  if (!value) {
-    throw new Error(
-      `Localized value for config key=${key} not found for both currentLocale=${currentLocale} or defaultLocale=${defaultLocale}`,
-    );
-  }
-  return value;
-}
 
 export default async function createConfigAsync() {
   return {
     title: 'SOLANA',
-    tagline: getLocalizedConfigValue('tagline'),
+    tagline: 'Powerful for developers. Fast for everyone.',
     organizationName: '543x',
     projectName: 'SOLANA',
     baseUrl,
