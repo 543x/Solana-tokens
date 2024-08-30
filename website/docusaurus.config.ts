@@ -169,19 +169,10 @@ export default async function createConfigAsync() {
         type: 'text/css',
       },
     ],
-    i18n: {
-      defaultLocale,
-
-      locales:
-        isDeployPreview || isBranchDeploy
-          ? // Deploy preview and branch deploys: keep them fast!
-            [defaultLocale]
-          : isI18nStaging
-          ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
-            [defaultLocale, 'ja']
-          : // Production locales
-            [defaultLocale, 'fr', 'pt-BR', 'ko', 'zh-CN'],
-    },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
     markdown: {
       format: 'detect',
       mermaid: true,
